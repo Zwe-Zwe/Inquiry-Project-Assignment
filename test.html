@@ -39,7 +39,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  animation: 30s cubic-bezier(1, 0.95, 0.565, 1) sliding infinite;
+  animation: 20s cubic-bezier(1, 0.95, 0.565, 1) sliding infinite;
 }
 .slide {
   position: relative;
@@ -78,6 +78,10 @@ body {
 .slide.five {
   background: rgb(173, 11, 188);
 }
+
+.slider_container:hover .slider {
+    animation-play-state: paused;
+
 @keyframes sliding {
   0% {
     transform: translateX(0%);
