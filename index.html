@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Malaysian Sign Language</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Zwe Htet Zaw">
+        <meta name="description" content="Feedback">
+        <meta name="keywords" content="feedback">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script>
+        // START OF SLIDER
+        const slideInterval = 7000; // Interval between slide transitions in milliseconds
+        let slideTimeout; // Holds the reference to the slide transition interval
+        let currentSlide = 0; // Index of the current slide being displayed
+        let nextSlideIndex = currentSlide + 1; // Index of the next slide to be displayed
+        document.addEventListener("DOMContentLoaded", function () {
+          const slides = document.querySelectorAll('.slide-wrapper input[type="radio"]');
+  
+          function nextSlide() {
+            slides[currentSlide].checked = false; // Unchecks the current slide
+            currentSlide = nextSlideIndex; // Updates the current slide index
+            slides[currentSlide].checked = true; // Checks the new current slide
+            nextSlideIndex = (currentSlide + 1) % slides.length; // Calculates the index of the next slide
+          }
+  
+          function startSlideShow() {
+            slideTimeout = setInterval(nextSlide, slideInterval); // Initiates the slide transition interval
+          }
+  
+          function resetSlideShow() {
+            clearInterval(slideTimeout); // Clears the current slide transition interval
+            currentSlide = Array.from(slides).findIndex((slide) => slide.checked); // Updates the current slide index based on the checked slide
+            nextSlideIndex = (currentSlide + 1) % slides.length; // Calculates the index of the next slide
+            startSlideShow(); // Restarts the slide show
+          }
+  
+          slides.forEach((slide) => {
+            slide.addEventListener("click", resetSlideShow); // Resets the slide show when a slide is clicked
+          });
+  
+          startSlideShow(); // Starts the slide show
+        });
+        // END OF SLIDER
+      </script>
+      </head>
+    <body>
+        <header>
+            <nav>
+              <ul class="navbar">
+                <li><img src="logo.webp" alt="logo" class="logo"></li>
+                <li><a href="#">Home</a></li>
+                <li>
+                  <a href="#">Services</a>
+                  <ul class="submenu">
+                    <li><a href="#">BIM Class</a></li>
+                    <li><a href="#">Car Wash</a></li>
+                    <li><a href="#">Haircut & Trimming</a></li>
+                    <li><a href="#">Sewing & Alteration</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Activities</a></li>
+                <li>
+                  <a href="#">Forms</a>
+                  <ul class="submenu">
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">About Us</a>
+                  <ul class="submenu">
+                    <li><a href="#">&#128100; Daniel Sie</a></li>
+                    <li><a href="#">&#128100; Michael Wong</a></li>
+                    <li><a href="#">&#128100; Paing Chan</a></li>
+                    <li><a href="#">&#128100; Sherlyn Kok</a></li>
+                    <li><a href="#">&#128100; Zwe Htet Zaw</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <article>
+            <section class="slider_container">
+              <section class="slider">
+                <div class="slide one">
+                  <img src="images/biomass_card3.jpg" alt="" />
+                  <span class="caption"> slide one </span>
+                </div>
+                <div class="slide two">
+                  <img src="images/forest-and-river.jpeg" alt="" />
+                  <span class="caption"> slide two </span>
+                </div>
+                <div class="slide three">
+                  <img src="images/geothermal_card3.jpg" alt="" />
+                  <span class="caption"> slide three </span>
+                </div>
+                <div class="slide four">
+                  <img src="images/home_card1.jpg" alt="" />
+                  <span class="caption"> slide four </span>
+                </div>
+                <div class="slide four">
+                  <img src="images/home_card2.jpg" alt="" />
+                  <span class="caption"> slide five </span>
+                </div>
+              </section>
+            </section>
+          </article> 
+          <footer>
+            <div class="container">
+              <div class="row">
+                <div class="footer-col">
+                  <h4 class="foot-h4-oh">operating hours</h4>
+                  <ul>
+                    <li>Monday to Friday 8am- 5pm</li>
+                    <li>Saturday 9am- 5pm</li>
+                    <li>Sunday Closed</li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>organization</h4>
+                  <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">activities</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>get help</h4>
+                  <ul>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Join Us</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                    <a href="https://www.facebook.com/sarawaksocietyforthedeaf"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a href="https://www.sarawaksocietyforthedeaf.org/"
+                      ><i class="fa-solid fa-globe"></i
+                    ></a>
+                    <a href="https://wa.me/+6012-8118260"
+                      ><i class="fa-brands fa-whatsapp"></i
+                    ></a>
+                    <a href="mailto:102783895@students.swinburne.edu.my"
+                      ><i class="fa-solid fa-envelope"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>   
+    </body>
+</html>
