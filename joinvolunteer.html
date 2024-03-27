@@ -1,1 +1,349 @@
-34 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" class="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body class="vol-body">
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">Services</a>
+          <ul class="submenu">
+            <li><a href="#">BIM Class</a></li>
+            <li><a href="#">Car Wash</a></li>
+            <li><a href="#">Haircut & Trimming</a></li>
+            <li><a href="#">Sewing & Alteration</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Activities</a></li>
+        <li>
+          <a href="#">Forms</a>
+          <ul class="submenu">
+            <li><a href="#">Enquiry</a></li>
+            <li><a href="#">Volunteer</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+          <ul class="submenu">
+            <li><a href="#">&#128100; Daniel Sie</a></li>
+            <li><a href="#">&#128100; Michael Wong</a></li>
+            <li><a href="#">&#128100; Paing Chan</a></li>
+            <li><a href="#">&#128100; Sherlyn Kok</a></li>
+            <li><a href="#">&#128100; Zwe Htet Zaw</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="volunteer-body">
+      <div class="volunteer-container">
+        <div class="title">Registration for Volunteering</div>
+        <form
+          class="volunteer-form"
+          action="mailto:102783895@students.swinburne.edu.my"
+          method="post"
+        >
+          <div class="user-details">
+            <div class="input-box">
+              <label for="first-name" class="details">First Name</label>
+              <input
+                id="first-name"
+                name="first-name"
+                type="text"
+                placeholder="Enter your first name"
+                maxlength="25"
+                pattern="[A-Za-z]+"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="last-name" class="details">Last Name</label>
+              <input
+                id="last-name"
+                name="last-name"
+                type="text"
+                placeholder="Enter your last name"
+                maxlength="25"
+                pattern="[A-Za-z]+"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="email" class="details">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="name@gmail.com"
+                required
+              />
+            </div>
+
+            <fieldset class="address-field">
+              <legend>Address Information</legend>
+              <div class="input-box">
+                <label for="address" class="details">Street Address</label>
+                <input
+                  id="address"
+                  name="address"
+                  type="text"
+                  placeholder="Enter your street"
+                  maxlength="40"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <label for="city-town" class="details">City / Town</label>
+                <input
+                  id="city-town"
+                  name="city-town"
+                  type="text"
+                  placeholder="Enter your city / town"
+                  maxlength="20"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <label for="state" class="details">State</label>
+                <select id="state" name="state" required>
+                  <option value="" disabled selected>Select your state</option>
+                  <option value="Johor">Johor</option>
+                  <option value="Kedah">Kedah</option>
+                  <option value="Kelantan">Kelantan</option>
+                  <option value="Melaka">Melaka</option>
+                  <option value="Negeri Sembilan">Negeri Sembilan</option>
+                  <option value="Pahang">Pahang</option>
+                  <option value="Perak">Perak</option>
+                  <option value="Perlis">Perlis</option>
+                  <option value="Pulau Pinang">Pulau Pinang</option>
+                  <option value="Sabah">Sabah</option>
+                  <option value="Sarawak">Sarawak</option>
+                  <option value="Selangor">Selangor</option>
+                  <option value="Terengganu">Terengganu</option>
+                  <option value="Federal Territory of Kuala Lumpur">
+                    Federal Territory of Kuala Lumpur
+                  </option>
+                  <option value="Federal Territory of Labuan">
+                    Federal Territory of Labuan
+                  </option>
+                  <option value="Federal Territory of Putrajaya">
+                    Federal Territory of Putrajaya
+                  </option>
+                </select>
+              </div>
+              <div class="input-box">
+                <label for="postal-code" class="details">Postcode</label>
+                <input
+                  id="postal-code"
+                  name="postal-code"
+                  type="text"
+                  placeholder="Enter your postal-code"
+                  pattern="[0-9]*"
+                  required
+                />
+              </div>
+            </fieldset>
+
+            <div class="input-box">
+              <label for="phone-number" class="details">Phone Number</label>
+              <input
+                id="phone-number"
+                name="phone-number"
+                type="tel"
+                placeholder="+## ##### #####"
+                pattern="\+\d{2}\d{10}"
+                required
+              />
+            </div>
+          </div>
+          <div class="volunteer-details">
+            <input type="radio" name="volunteer" id="dot-1" value="Full-time" />
+            <input type="radio" name="volunteer" id="dot-2" value="Part-time" />
+            <label for="volunteer-options" class="volunteer-title"
+              >Which organization you wish to join as a Volunteer ?</label
+            >
+            <select id="volunteer-options" name="volunteer-options" required>
+              <option value="" selected disabled>Select an Organization</option>
+              <option value="MSL">Malaysian Sign Language (MSL)</option>
+              <option value="Sarawak Society for the Deaf">
+                Sarawak Society for the Deaf
+              </option>
+            </select>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="volunteer">Full-time</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="volunteer">Part-time</span>
+              </label>
+            </div>
+            <div class="full-time-details">
+              <p>Working Hours:</p>
+              <p>Monday To Friday => 8am - 5pm</p>
+              <p>Saturday => 9am - 5pm</p>
+            </div>
+            <div class="part-time-details">
+              <p>Working Days</p>
+              <label for="monday"
+                ><input
+                  type="checkbox"
+                  name="day"
+                  id="monday"
+                  value="Monday"
+                />Monday</label
+              >
+              <label for="tuesday"
+                ><input
+                  type="checkbox"
+                  name="day"
+                  id="tuesday"
+                  value="Tuesday"
+                />Tuesday</label
+              >
+              <label for="wednesday"
+                ><input
+                  type="checkbox"
+                  name="day"
+                  id="wednesday"
+                  value="Wednesday"
+                />Wednesday</label
+              >
+              <label for="thursday"
+                ><input
+                  type="checkbox"
+                  name="day"
+                  id="thursday"
+                  value="Thursday"
+                />Thursday</label
+              >
+              <label for="friday"
+                ><input
+                  type="checkbox"
+                  name="day"
+                  id="friday"
+                  value="Friday"
+                />Friday</label
+              >
+              <label for="saturday"
+                ><input
+                  type="checkbox"
+                  name="day"
+                  id="saturday"
+                  value="Saturday"
+                />Saturday</label
+              >
+              <br />
+              <p>Working Time</p>
+              <label
+                ><input type="radio" name="time" value="9am-11am" />9am -
+                11am</label
+              >
+              <label
+                ><input type="radio" name="time" value="11am-1pm" />11am -
+                1pm</label
+              >
+              <label
+                ><input type="radio" name="time" value="1pm-3pm" />1pm -
+                3pm</label
+              >
+              <label
+                ><input type="radio" name="time" value="3pm-5pm" />3pm -
+                5pm</label
+              >
+            </div>
+            <div class="reason-to-volunteer">
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Why you would like to volutnteer? "
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="button">
+              <input type="reset" value="Reset" />
+            </div>
+            <div class="button">
+              <input type="submit" value="Register" />
+            </div>
+          </div>
+          <p id="required_warning">
+            *All the fields are required to be filled.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4 class="foot-h4-oh">operating hours</h4>
+            <ul>
+              <li>Monday to Friday 8am- 5pm</li>
+              <li>Saturday 9am- 5pm</li>
+              <li>Sunday Closed</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>organization</h4>
+            <ul>
+              <li><a href="#">services</a></li>
+              <li><a href="#">activities</a></li>
+              <li><a href="#">Enquiry</a></li>
+              <li><a href="#">Join Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>about us</h4>
+            <ul>
+              <li><a href="#">Profile 1</a></li>
+              <li><a href="#">Profile 2</a></li>
+              <li><a href="#">Profile 3</a></li>
+              <li><a href="#">Profile 4</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/sarawaksocietyforthedeaf"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://www.sarawaksocietyforthedeaf.org/"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+              <a href="https://wa.me/+6012-8118260"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+              <a href="mailto:102783895@students.swinburne.edu.my"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+              <br />
+            </div>
+            <a class="footer-essentials" href="acknowledgement.html"
+              >Acknowledgements</a
+            >
+            <a class="footer-essentials" href="enhancement.html"
+              >Enhancements</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
