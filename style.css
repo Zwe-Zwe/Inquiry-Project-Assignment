@@ -254,7 +254,7 @@ article {
 #enquiry_form {
 
   max-width: 600px;
-  margin: 50px auto;
+  margin:40px auto;
   background-color: var(--clr-primary);
   padding: 20px;
   border-radius: 8px;
@@ -262,7 +262,9 @@ article {
 }
 
 form {
+  margin-top: 20px;
   margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
 }
 
 fieldset {
@@ -300,7 +302,7 @@ select {
 input[type="submit"],
 input[type="reset"] {
   display: inline-block;
-  background-color: var(--clr-accent);
+  background-color: var(--clr-primary);
   color: var(--clr-secondary);
   cursor: pointer;
   transition: background-color 0.3s;
@@ -310,7 +312,7 @@ input[type="reset"] {
 input[type="submit"]:hover,
 input[type="reset"]:hover {
   background-color: var(--clr-secondary);
-  color: var(--clr-accent);
+  color: var(--clr-primary);
 }
 
 input:hover,
@@ -329,7 +331,7 @@ table {
 }
 
 td {
-  padding: 8px;
+  padding: 5px;
 }
 
 #required_warning {
@@ -337,6 +339,16 @@ td {
   font-style: italic;
   font-size: 14px;
   text-align: right;
+}
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(70px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 
