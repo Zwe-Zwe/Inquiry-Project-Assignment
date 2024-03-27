@@ -248,6 +248,106 @@ article {
     }
   }
 }
+
+/* Start of Enquiry Form */
+
+#enquiry_form {
+
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: var(--clr-primary);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  border: 1px solid var(--clr-secondary);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+legend {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--clr-accent);
+}
+
+label {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  color: var(--clr-accent);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid var(--clr-secondary);
+  border-radius: 4px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  display: inline-block;
+  background-color: var(--clr-accent);
+  color: var(--clr-secondary);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 49%;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-accent);
+}
+
+input:hover,
+select:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+input:invalid,
+select:invalid {
+  border-color: #ff0000;
+}
+table {
+  width: 100%;
+}
+
+td {
+  padding: 8px;
+}
+
+#required_warning {
+  color: red;
+  font-style: italic;
+  font-size: 14px;
+  text-align: right;
+}
+
+
+@media only screen and (max-width: 600px) {
+  label {
+    width: 100%;
+  }
+}
+
+/* End of Enquiry service form */
+
 /*End of CSS of navbar*/
 
 /* .slideshow-container {
