@@ -31,7 +31,7 @@ html {
   /* place-self: end; */
   position: sticky;
   bottom: 0.5vw;
-  margin-top: 170vh;
+  margin-top: 150vh;
   /* margin-top: calc(100vh + var(--offset)); */
   margin-left: 92%;
   white-space: nowrap;
@@ -252,20 +252,17 @@ article {
 /* Start of Enquiry Form */
 
 #enquiry_form {
-
+  margin: auto;
+  margin-top: 60px;
+  /* margin-bottom: 20px; */
+  animation: fadeInUp 1s ease-out;
   max-width: 600px;
-  margin:40px auto;
   background-color: var(--clr-primary);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  animation: fadeInUp 1s ease-out;
-}
 
 fieldset {
   margin-bottom: 20px;
