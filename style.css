@@ -547,7 +547,7 @@ td {
   border-radius: 5px;
 }
 .volunteer-container .title {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   text-align: center;
 }
@@ -576,18 +576,8 @@ td {
   width: 100%;
   padding-left: 15px;
   outline: none;
-  border: 1px solid var(--clr-accent);
   border-radius: 5px;
   transition: all ease;
-}
-.user-details .input-box input:focus,
-.user-details .input-box input:valid,
-.user-details .input-box select:focus,
-.user-details .input-box select:valid,
-.volunteer-details select:focus,
-.volunteer-details select:valid,
-.reason-to-volunteer textarea:focus {
-  border: 2px solid var(--clr-accent);
 }
 .address-field {
   border: none;
@@ -658,10 +648,12 @@ td {
   padding-left: 15px;
   padding-top: 10px;
   outline: none;
-  border: 1px solid var(--clr-accent);
   border-radius: 5px;
   transition: all ease;
   margin-bottom: 1.2%;
+}
+.reason-to-volunteer textarea:invalid {
+  border-color: #ff0000;
 }
 .volunteer-form .button {
   height: 45px;
