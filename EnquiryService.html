@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Malaysian Sign Language</title>
+    <title>Enquiry Service Form</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
@@ -45,21 +45,21 @@
       </ul>
     </nav>
     </header>
-        <article>
-            <form id="enquiry_form" action="mailto:zwehtetzaw777@gmail.com" method="post" enctype="text/plain">
+        <article id="enquiry_form">
+            <form  action="mailto:zwehtetzaw777@gmail.com" method="post" enctype="text/plain">
               <fieldset>
                 <legend>Enquiry Service</legend>
                 <table>
                   <tr>
-                    <td><label for="first_name">First Name</label></td>
-                    <td><input name="first_name" id="first_name" type="text" required="required" placeholder="First Name"></td>
+                    <td><label class="enquiry_labels" for="first_name">First Name</label></td>
+                    <td><input name="first_name" id="first_name" type="text" maxlength="25" pattern="[A-Za-z ]+" required="required" placeholder="First Name"></td>
                   </tr>
                   <tr>
-                    <td><label for="last_name">Last Name</label></td>
-                    <td><input name="last_name" id="last_name" type="text" required="required" placeholder="last Name"></td>
+                    <td><label class="enquiry_labels" for="last_name">Last Name</label></td>
+                    <td><input name="last_name" id="last_name" type="text" maxlength="25" pattern="[A-Za-z ]+"  required="required" placeholder="last Name"></td>
                   </tr>
                   <tr>
-                      <td><label for="countryCode">Country Code</label></td>
+                      <td><label class="enquiry_labels" for="countryCode">Country Code</label></td>
                       <td><select id="countryCode" name="countryCode" required>
                             <option value="" disabled selected>Select a country</option>
                             <option data-countryCode="DZ" value="213">Algeria (+213)</option>
@@ -279,11 +279,11 @@
                       </select></td>                 
                   </tr>
                   <tr>
-                    <td><label for="phoneNumber">Phone Number</label></td>
+                    <td><label class="enquiry_labels" for="phoneNumber">Phone Number</label></td>
                     <td><input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="Enter Your Phone Number" required></td>
                   </tr>
                   <tr>
-                    <td><label for="service">Choose Service</label></td>
+                    <td><label class="enquiry_labels" for="service">Choose Service</label></td>
                     <td>
                       <select id="service" name="service" required>
                         <option value="" disabled selected>Select a Service</option>
@@ -300,11 +300,11 @@
                 <legend>Appointment</legend>
                 <table>
                   <tr>
-                    <td><label for="appointmentDate">Select Date:</label></td>
+                    <td><label class="enquiry_labels" for="appointmentDate">Select Date:</label></td>
                     <td><input type="date" id="appointmentDate" name="appointmentDate" required></td>
                   </tr>
                   <tr>
-                    <td><label for="appointmentTime">Select Time:</label></td>
+                    <td><label class="enquiry_labels" for="appointmentTime">Select Time:</label></td>
                     <td><input type="time" id="appointmentTime" name="appointmentTime" required></td>
                   </tr>  
                 </table>
@@ -341,7 +341,7 @@
                 </ul>
               </div>
               <div class="footer-col">
-                <h4>follow us</h4>
+                <h4>contact us</h4>
                 <div class="social-links">
                   <a href="https://www.facebook.com/sarawaksocietyforthedeaf"
                     ><i class="fab fa-facebook-f"></i

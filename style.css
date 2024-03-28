@@ -90,6 +90,7 @@ article {
 }
 .slider_container {
   position: relative;
+  margin-top: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -176,85 +177,218 @@ article {
 /* END OF SLIDER */
 
 /*Start of CSS of navbar*/
-.navbar {
-  align-items: center;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  font-family: "Kanit", sans-serif;
-  font-size: 15px;
-  z-index: 998;
+
+header{
   background-color: white;
-  margin: 0;
-  padding-top: 1.2%;
-  box-shadow: 0px 5px 15px grey;
-  li {
-    display: inline-block;
-    margin-right: 2%;
-    transition: all 0.5s ease-in-out;
-    &:hover {
-      .submenu {
-        height: 100%;
-      }
-      a {
-        color: #546da6;
-        &::before {
-          visibility: visible;
-          transform: scale(1, 1);
-        }
-      }
-    }
-    .submenu {
-      overflow: hidden;
-      position: absolute;
-      left: 0;
-      width: 100%;
-      background-color: #546da6;
-      height: 0;
-      line-height: 40px;
-      box-sizing: border-box;
-      transition: height 0.3s ease-in-out;
-      transition-delay: 0.1s;
-      box-shadow: 0px 5px 15px grey;
-      z-index: 999;
-      a {
-        color: #ffffff;
-        /* margin-top: 20px; */
-        font-size: 15px;
-        &:hover {
-          color: #ffffff;
-          text-decoration: underline;
-          text-underline-offset: 4px;   }
-      }
-    }
-    a {
-      color: rgb(38, 38, 38);
-      display: block;
-      padding: 0 7px 0 7px;
-      margin: 0 0 15px;
-      text-decoration: none;
-      position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        bottom: -15px;
-        left: 0px;
-        background-color: #546da6;
-        transition: all 0.2s ease-in-out;
-        transform: scale(0, 0);
-        visibility: hidden;
-      }
-    }
+  box-shadow:0px 5px 15px grey;
+  position: sticky;
+  /* height: 0; */
+  top: 0;
+  width: 100%;
+  z-index:999;
   }
+
+@media (max-width: 767px){
+
+  /*Start of CSS for phone navbar*/
+    .logo{
+        display: inline-block;
+        color: black;
+        font-size: 40px;
+        margin-left: 10px;
+        text-decoration: none;
+    }
+    nav a{
+    text-decoration: none;
+    }
+    nav ul{
+        list-style: none;
+    }
+    
+    nav{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: white;
+        overflow: hidden;
+    }
+    .navbar a{
+        display: block;
+        padding: 20px;
+        color: black;
+    }
+    nav a:hover{
+        background-color:#546DA6;
+    }
+    nav{
+        max-height: 0;
+        transition: max-height .5s ease-out;
+    }
+    .hamb{
+        cursor: pointer;
+        float: right;
+        padding-top: 25px;
+        padding-right: 5%;
+    }/* Style label tag */
+
+    .hamb-line {
+        background: black;
+        display: block;
+        height: 4px;
+        position: relative;
+        width: 27px;
+        z-index:999;
+
+    } /* Style span tag */
+
+    .hamb-line::before,
+    .hamb-line::after{
+        background: black;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+        z-index:999;
+    }
+    .hamb-line::before{
+        top: 9px;
+    }
+    .hamb-line::after{
+        top: -9px;
+    }
+
+    .side-menu {
+        display: none;
+    }
+    .side-menu:checked ~ nav{
+        max-height: 100%;
+    }
+    .side-menu:checked ~ .hamb .hamb-line {
+        background: transparent;
+    }
+    .side-menu:checked ~ .hamb .hamb-line::before {
+        transform: rotate(-45deg);
+        top:0;
+    }
+    .side-menu:checked ~ .hamb .hamb-line::after {
+        transform: rotate(45deg);
+        top:0;
+    }
+    .submenu{
+        background-color: white;
+        width: 100%;
+        z-index: 1;
+        padding: 20px 0 ;
+        display: none;
+        box-shadow:10px 5px 15px grey;
+    }
+    .submenu li{
+        transition:height 0.5s;
+    }
+    .submenu a{
+        color: black;
+        text-decoration: none;
+        padding: 0;
+        margin: 5px 0;
+        text-align: left;
+        margin-left:10%;
+    }
+    .submenu a:hover{
+        text-decoration:underline;
+        background-color:white;
+        text-underline-offset:4px;
+    }
+    .subnav:hover .submenu{
+        display: block;
+    }
+  /*End of CSS for phone navbar*/
+}
+@media (min-width: 767px){
+    
+    .navbar{
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        top:0;
+        right:0;
+        left:0;
+        font-family:"Kanit",sans-serif;
+        font-size:15px;
+        z-index:998;
+        background-color:white;
+        margin:0;
+        padding-top: 1.2%;
+        box-shadow:0px 5px 15px grey;
+        li {
+            display:inline-block;
+            margin-right: 2%;
+            transition:all 0.5s ease-in-out;
+            &:hover {
+            .submenu {
+                height: 100%;
+            }
+            a {        
+                color: #546DA6;
+                &::before {
+                visibility: visible;
+                transform: scale(1, 1);
+                }
+            }
+            }
+            .submenu {
+            overflow:hidden;
+            position:absolute;
+            left: 0;
+            width: 100%;
+            background-color: #546DA6;
+            height: 0;
+            line-height: 50px;
+            box-sizing:border-box;
+            transition:height 0.3s ease-in-out;
+            transition-delay: 0.1s;
+            box-shadow:0px 5px 15px grey;
+            z-index:999;
+            a {
+                color: #ffffff;
+                /* margin-top: 20px; */
+                font-size: 15px;
+                &:hover {
+                color: #ffffff;
+                text-decoration:underline;
+                text-underline-offset: 4px;
+                }
+            }
+            }
+            a {
+            color: rgb(38, 38, 38);
+            display: block;
+            padding: 0 7px 0 7px;
+            margin: 0 0 15px;
+            text-decoration: none;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                bottom: -15px;
+                left: 0px;
+                background-color: #546DA6;
+                transition: all 0.2s ease-in-out;
+                transform: scale(0, 0);
+                visibility: hidden;
+            }
+            }
+        }
+    }
 }
 
 /* Start of Enquiry Form */
 
 #enquiry_form {
+  min-height: 700px;
   margin: auto;
   margin-top: 60px;
   /* margin-bottom: 20px; */
@@ -280,7 +414,7 @@ legend {
   color: var(--clr-accent);
 }
 
-label {
+.enquiy_labels {
   display: inline-block;
   width: 100%;
   margin-bottom: 10px;
@@ -353,7 +487,7 @@ td {
 
 
 @media only screen and (max-width: 600px) {
-  label {
+  .enquiry_labels {
     width: 100%;
   }
 }
