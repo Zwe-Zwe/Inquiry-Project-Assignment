@@ -415,16 +415,16 @@ td {
   background-position: center;
 }
 .front-1 {
-  background-image: url(car_wash.jpg);
+  background-image: url(styles/images/car_wash.jpg);
 }
 .front-2 {
-  background-image: url(sewing.jpg);
+  background-image: url(styles/images/sewing.jpg);
 }
 .front-3 {
-  background-image: url(class.webp);
+  background-image: url(styles/images/class.webp);
 }
 .front-4 {
-  background-image: url(haircut.webp);
+  background-image: url(styles/images/haircut.webp);
 }
 .card-back {
   padding: 0 30px;
