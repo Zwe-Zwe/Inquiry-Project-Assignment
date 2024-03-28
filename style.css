@@ -21,9 +21,9 @@ html {
 
 .top {
   /* --offset: px; */
-  background-color: #000;
-  color: #fff;
-  padding: 5px;
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+  padding: 3px;
   text-decoration: none;
   border-radius: 100px;
   font-size: 1.1vw;
@@ -35,7 +35,7 @@ html {
   /* margin-top: calc(100vh + var(--offset)); */
   margin-left: 92%;
   white-space: nowrap;
-  opacity: 0.3;
+  opacity: 0.5;
   transition: 0.5s ease;
 }
 
@@ -49,7 +49,10 @@ html {
 
 
 .top:hover{
-  opacity: 0.8;
+  opacity: 1;
+  padding: 5px;
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
 }
 
 /* End of Back to Top */
@@ -223,7 +226,7 @@ article {
         &:hover {
           color: #ffffff;
           text-decoration: underline;
-        }
+          text-underline-offset: 4px;   }
       }
     }
     a {
@@ -340,7 +343,7 @@ td {
 @keyframes fadeInUp {
   from {
       opacity: 0;
-      transform: translateY(70px);
+      transform: translateY(50px);
   }
   to {
       opacity: 1;
@@ -531,6 +534,7 @@ td {
   margin: 0;
   padding: 20px 0;
   padding-top: 50px;
+  animation: fadeInUp 1s ease-out;
   background-color: #f3f3f3;
 }
 .acknowledgement-container {
@@ -543,12 +547,19 @@ td {
   h1 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 40px;
   }
 }
 .acknowledgements {
   margin-top: 20px;
   h2 {
     margin-bottom: 10px;
+    font-size: 25px;
+  }
+
+  h3{
+    margin-bottom: 10px;
+    font-size: 16px;
   }
 
   ul {
@@ -558,11 +569,13 @@ td {
 
   li {
     margin-bottom: 10px;
+    font-size: 14px;
   }
 
   a {
     color: #007bff;
     text-decoration: none;
+    font-size: 14px;
   }
 
   a:hover {
@@ -579,6 +592,7 @@ td {
   align-items: center;
   padding: 10px;
   background: var(--clr-primary);
+  animation: fadeInUp 1s ease-out;
 }
 .volunteer-container {
   border: 2px solid var(--clr-accent);
@@ -842,3 +856,26 @@ footer .container .row {
   }
 }
 /* End of footer style */
+
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--clr-primary); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--clr-accent);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-secondary);
+}
+
