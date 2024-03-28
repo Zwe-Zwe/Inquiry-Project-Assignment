@@ -13,6 +13,376 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Start of NAV BAR */
+
+.space {
+  padding-top: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+@media (max-width: 767px) {
+  /*Start of CSS for phone navbar*/
+  .logo {
+    display: inline-block;
+    color: black;
+    font-size: 40px;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  nav a {
+    text-decoration: none;
+  }
+  nav ul {
+    list-style: none;
+  }
+  header {
+    background-color: white;
+    box-shadow: 0px 5px 15px grey;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    overflow: hidden;
+  }
+  .navbar a {
+    display: block;
+    padding: 20px;
+    color: black;
+  }
+  nav a:hover {
+    background-color: #546da6;
+  }
+  nav {
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+  }
+  .hamb {
+    cursor: pointer;
+    float: right;
+    padding-top: 25px;
+    padding-right: 5%;
+  } /* Style label tag */
+
+  .hamb-line {
+    background: black;
+    display: block;
+    height: 4px;
+    position: relative;
+    width: 27px;
+    z-index: 999;
+  } /* Style span tag */
+
+  .hamb-line::before,
+  .hamb-line::after {
+    background: black;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+    z-index: 999;
+  }
+  .hamb-line::before {
+    top: 9px;
+  }
+  .hamb-line::after {
+    top: -9px;
+  }
+
+  .side-menu {
+    display: none;
+  }
+  .side-menu:checked ~ nav {
+    max-height: 100%;
+  }
+  .side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .submenu {
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+    padding: 20px 0;
+    display: none;
+    box-shadow: 10px 5px 15px grey;
+  }
+  .submenu li {
+    transition: height 0.5s;
+  }
+  .submenu a {
+    color: black;
+    text-decoration: none;
+    padding: 0;
+    margin: 5px 0;
+    text-align: left;
+    margin-left: 10%;
+  }
+  .submenu a:hover {
+    text-decoration: underline;
+    background-color: white;
+    text-underline-offset: 4px;
+  }
+  .subnav:hover .submenu {
+    display: block;
+  }
+  /*End of CSS for phone navbar*/
+}
+@media (min-width: 767px) {
+  .navbar {
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+    z-index: 998;
+    background-color: white;
+    margin: 0;
+    padding-top: 1.2%;
+    box-shadow: 0px 5px 15px grey;
+    li {
+      display: inline-block;
+      margin-right: 2%;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        .submenu {
+          height: 100%;
+        }
+        a {
+          color: #546da6;
+          &::before {
+            visibility: visible;
+            transform: scale(1, 1);
+          }
+        }
+      }
+      .submenu {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #546da6;
+        height: 0;
+        line-height: 50px;
+        box-sizing: border-box;
+        transition: height 0.3s ease-in-out;
+        transition-delay: 0.1s;
+        box-shadow: 0px 5px 15px grey;
+        z-index: 999;
+        a {
+          color: #ffffff;
+          /* margin-top: 20px; */
+          font-size: 15px;
+          &:hover {
+            color: #ffffff;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+          }
+        }
+      }
+      a {
+        color: rgb(38, 38, 38);
+        display: block;
+        padding: 0 7px 0 7px;
+        margin: 0 0 15px;
+        text-decoration: none;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          bottom: -15px;
+          left: 0px;
+          background-color: #546da6;
+          transition: all 0.2s ease-in-out;
+          transform: scale(0, 0);
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}
+/* End of NAV BAR */
+
+/*Start of CSS for activity_page*/
+.text {
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 3%;
+  font-size: 17px;
+  font-weight: bold;
+}
+.content_text {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+}
+.card1 {
+  background-color: white;
+  padding-bottom: 0;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 3%;
+  width: 70%;
+  border: 3px solid black;
+  box-shadow: 10px 10px 0px #968eaf;
+}
+#ch1 {
+  display: none;
+}
+#ch1:checked ~ .content1 {
+  display: block;
+}
+#ch1:checked ~ label {
+  display: none;
+}
+.content1 {
+  display: none;
+}
+.card2 {
+  background-color: white;
+  padding-bottom: 0;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 3%;
+  width: 70%;
+  border: 3px solid black;
+  box-shadow: 10px 10px 0px #968eaf;
+}
+#ch2 {
+  display: none;
+}
+#ch2:checked ~ .content2 {
+  display: block;
+}
+#ch2:checked ~ label {
+  display: none;
+}
+.content2 {
+  display: none;
+}
+.card3 {
+  background-color: white;
+  padding-bottom: 0;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 3%;
+  width: 70%;
+  border: 3px solid black;
+  box-shadow: 10px 10px 0px #968eaf;
+}
+#ch3 {
+  display: none;
+}
+#ch3:checked ~ .content3 {
+  display: block;
+}
+#ch3:checked ~ label {
+  display: none;
+}
+.content3 {
+  display: none;
+}
+.card4 {
+  background-color: white;
+  padding-bottom: 0;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 3%;
+  width: 70%;
+  border: 3px solid black;
+  box-shadow: 10px 10px 0px #968eaf;
+}
+#ch4 {
+  display: none;
+}
+#ch4:checked ~ .content4 {
+  display: block;
+}
+#ch4:checked ~ label {
+  display: none;
+}
+.content4 {
+  display: none;
+}
+.extend {
+  display: inline-block;
+  cursor: pointer;
+  padding: 1%;
+  border-radius: 3px;
+  margin-top: 1.5%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+.extend:hover {
+  background-color: rgb(150, 142, 175, 0.2);
+}
+.activity_img {
+  width: 50%;
+  margin: auto;
+  margin-left: 3%;
+  display: block;
+  border-radius: 15px 15px;
+  float: right;
+}
+.activity_line {
+  margin-bottom: 2%;
+  border: 2px solid #546da6;
+}
+.unordered {
+  margin-left: 4%;
+}
+@media (max-width: 767px) {
+  .space {
+    padding-top: 7%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 7%;
+  }
+  .card1 {
+    width: 80%;
+  }
+  .card2 {
+    width: 80%;
+  }
+  .card3 {
+    width: 80%;
+  }
+  .card4 {
+    width: 80%;
+  }
+  .activity_img {
+    width: 100%;
+  }
+}
+iframe {
+  margin-top: 2%;
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+/* End of Activity Page */
+
 /* Start of Bact to Top  */
 
 html {
@@ -40,15 +410,13 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-
   .top {
     font-size: 3vw;
     margin-left: 93%;
   }
 }
 
-
-.top:hover{
+.top:hover {
   opacity: 1;
   padding: 5px;
   background-color: var(--clr-accent);
@@ -176,6 +544,7 @@ article {
 }
 /* END OF SLIDER */
 
+<<<<<<< HEAD
 /*Start of CSS of navbar*/
 
 header{
@@ -385,6 +754,8 @@ header{
     }
 }
 
+=======
+>>>>>>> b3e69c41eafa402be2a726a2923e05466b3d6d63
 /* Start of Enquiry Form */
 
 #enquiry_form {
@@ -399,7 +770,6 @@ header{
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 fieldset {
   margin-bottom: 20px;
@@ -454,8 +824,6 @@ select:hover {
   background-color: #f0f0f0;
 }
 
-
-
 input:invalid,
 select:invalid {
   border-color: #ff0000;
@@ -476,75 +844,21 @@ td {
 }
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translateY(50px);
+    opacity: 0;
+    transform: translateY(50px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
 
 @media only screen and (max-width: 600px) {
   .enquiry_labels {
     width: 100%;
   }
 }
-
 /* End of Enquiry service form */
-
-/*End of CSS of navbar*/
-
-/* .slideshow-container {
-  padding: 4rem;
-  margin-top: 4%;
-}
-.slider-wrapper {
-  position: relative;
-  max-width: 50rem;
-  margin: 0 auto;
-}
-.slider {
-  display: flex;
-  aspect-ratio: 16 / 9;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-  border-radius: 0.5rem;
-  -ms-overflow-style: none; 
-  scrollbar-width: none;
-} */
-/* Hide scrollbar for Chrome, Safari and Opera */
-/* .slider::-webkit-scrollbar {
-  display: none;
-}
-.slider img {
-  flex: 1 0 100%;
-  scroll-snap-align: start;
-  object-fit: cover;
-}
-.slider-nav {
-  display: flex;
-  column-gap: 1rem;
-  position: absolute;
-  bottom: 1.25rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-.slider-nav a {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.75;
-  transition: opacity ease 250ms;
-}
-.slider-nav a:hover {
-  opacity: 1;
-} */
 
 /* Card Section */
 .card-h2 {
@@ -605,16 +919,16 @@ td {
   background-position: center;
 }
 .front-1 {
-  background-image: url(car_wash.jpg);
+  background-image: url(styles/images/car_wash.jpg);
 }
 .front-2 {
-  background-image: url(sewing.jpg);
+  background-image: url(styles/images/sewing.jpg);
 }
 .front-3 {
-  background-image: url(class.webp);
+  background-image: url(styles/images/class.webp);
 }
 .front-4 {
-  background-image: url(haircut.webp);
+  background-image: url(styles/images/haircut.webp);
 }
 .card-back {
   padding: 0 30px;
@@ -691,7 +1005,7 @@ td {
     font-size: 25px;
   }
 
-  h3{
+  h3 {
     margin-bottom: 10px;
     font-size: 16px;
   }
@@ -737,7 +1051,7 @@ td {
   border-radius: 5px;
 }
 .volunteer-container .title {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   text-align: center;
 }
@@ -766,18 +1080,8 @@ td {
   width: 100%;
   padding-left: 15px;
   outline: none;
-  border: 1px solid var(--clr-accent);
   border-radius: 5px;
   transition: all ease;
-}
-.user-details .input-box input:focus,
-.user-details .input-box input:valid,
-.user-details .input-box select:focus,
-.user-details .input-box select:valid,
-.volunteer-details select:focus,
-.volunteer-details select:valid,
-.reason-to-volunteer textarea:focus {
-  border: 2px solid var(--clr-accent);
 }
 .address-field {
   border: none;
@@ -794,10 +1098,10 @@ td {
   cursor: pointer;
 }
 .volunteer-details .category label {
-  display: none; 
+  display: none;
 }
 #volunteer-options:valid + .category label {
-  display: flex; 
+  display: flex;
 }
 .volunteer-details .category .dot {
   height: 18px;
@@ -848,10 +1152,12 @@ td {
   padding-left: 15px;
   padding-top: 10px;
   outline: none;
-  border: 1px solid var(--clr-accent);
   border-radius: 5px;
   transition: all ease;
   margin-bottom: 1.2%;
+}
+.reason-to-volunteer textarea:invalid {
+  border-color: #ff0000;
 }
 .volunteer-form .button {
   height: 45px;
@@ -999,7 +1305,7 @@ footer .container .row {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--clr-primary); 
+  background: var(--clr-primary);
 }
 
 /* Handle */
@@ -1012,4 +1318,3 @@ footer .container .row {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--clr-secondary);
 }
-
