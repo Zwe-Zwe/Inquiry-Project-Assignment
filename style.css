@@ -1568,6 +1568,15 @@ footer .container .row {
   color: var(--clr-secondary);
   background-color: var(--clr-primary);
 }
+#youtube-link {
+  font-size: 12px;
+  text-transform: capitalize;
+  padding-right: 25px;
+  color: var(--clr-primary);
+  text-decoration: none;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;
