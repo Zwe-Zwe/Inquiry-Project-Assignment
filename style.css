@@ -13,6 +13,46 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Start of iframe */
+
+#index_video {
+  display: flex;
+  justify-content: center; /* Horizontally center the iframe */
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+#index_video iframe {
+  width: 1000px; /* Adjust the width as needed */
+  height: 600px; /* Adjust the height as needed */
+  border-radius: 30px;
+  box-shadow: 0px 5px 15px grey;
+  transition: transform 0.5s ease;
+}
+
+#index_video iframe:hover {
+  transform: scale(1.1); /* Scale up the iframe on hover */
+  transition: transform 0.5s ease; /* Add a smooth transition */
+}
+
+@media screen and (max-width: 1024px) {
+  #index_video iframe {
+    width: 800px; /* Adjust the width as needed */
+    height: 500px; /* Adjust the height as needed */
+  }
+
+ @media screen and (max-width: 768px) {
+  #index_video iframe {
+    width: 600px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+  }
+
+ } 
+  
+}
+
+/* End of iframe */
+
 /* Start of NAV BAR */
 
 .space {
@@ -653,6 +693,8 @@ iframe {
 
 /* Start of Bact to Top  */
 
+/* Start of Bact to Top  */
+
 html {
   scroll-behavior: smooth;
 }
@@ -661,32 +703,39 @@ html {
   /* --offset: px; */
   background-color: var(--clr-accent);
   color: var(--clr-primary);
-  padding: 3px;
+  padding: 4px;
   text-decoration: none;
   border-radius: 100px;
-  font-size: 1.1vw;
+  font-size: 14px;
   font-family: sans-serif;
   /* place-self: end; */
   position: sticky;
   bottom: 0.5vw;
   margin-top: 150vh;
   /* margin-top: calc(100vh + var(--offset)); */
-  margin-left: 92%;
+  margin-left: 93%;
   white-space: nowrap;
-  opacity: 0.5;
+  opacity: 0.6;
   transition: 0.5s ease;
+}
+
+@media screen and (max-width: 1200px) {
+  .top {
+    font-size: 13px;
+    margin-left: 90%;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .top {
-    font-size: 3vw;
-    margin-left: 93%;
+    font-size: 12px;
+    margin-left: 86%;
   }
 }
 
 .top:hover {
   opacity: 1;
-  padding: 5px;
+  padding: 6px;
   background-color: var(--clr-accent);
   color: var(--clr-primary);
 }
@@ -1206,16 +1255,16 @@ td {
   background-position: center;
 }
 .front-1 {
-  background-image: url(styles/images/car_wash.jpg);
+  background-image: url(images/car_wash.jpg);
 }
 .front-2 {
-  background-image: url(styles/images/sewing.jpg);
+  background-image: url(images/sewing.jpg);
 }
 .front-3 {
-  background-image: url(styles/images/class.webp);
+  background-image: url(images/class.webp);
 }
 .front-4 {
-  background-image: url(styles/images/haircut.webp);
+  background-image: url(images/haircut.webp);
 }
 .card-back {
   padding: 0 30px;
