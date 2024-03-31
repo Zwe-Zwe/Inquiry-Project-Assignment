@@ -303,7 +303,7 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
   border-collapse: collapse;
 }
 .servicestable th,
-td {
+.servicestable td {
   padding: 1%;
   border: 1px solid #546da6;
 }
@@ -317,7 +317,6 @@ td {
 .serviceslink {
   color: #546da6;
 }
-
 /* End of Service Page Two */
 
 /*Start of CSS for phone navbar*/
@@ -700,7 +699,7 @@ iframe {
 #activity_addition {
   list-style-type: lower-roman;
 }
-/*End of CSS for activity_page*/
+/*End of activity_page*/
 
 /* Back to Top  */
 
@@ -715,7 +714,6 @@ html {
   text-decoration: none;
   border-radius: 100px;
   font-size: 14px;
-  font-family: sans-serif;
   /* place-self: end; */
   position: sticky;
   bottom: 0.5vw;
@@ -744,48 +742,10 @@ html {
   background-color: var(--clr-accent);
   color: var(--clr-primary);
 }
-
 /* End of Back to Top */
 
-/* About Section */
-
-.about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  flex-wrap: wrap; /* to make the text wrap around the image */
-}
-.about .text {
-  flex: 3;
-  padding: 40px;
-  text-align: center;
-}
-.about .photos {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
-.about .photos img {
-  max-width: 100%;
-  padding: 10px;
-  height: auto;
-}
-@media (max-width: 768px) {
-  .about .text {
-    flex: 100%;
-  }
-  .about .photos {
-    flex: 100%;
-    flex-direction: column;
-    text-align: center;
-  }
-}
-/* End of About */
-
 /* SLIDER */
+
 article {
   width: 100%;
   height: 98vh;
@@ -888,99 +848,43 @@ article {
 }
 /* END OF SLIDER */
 
-/* Enquiry Form */
+/* ABOUT SECTION */
 
-#enquiry_form {
-  min-height: 700px;
-  margin: auto;
-  margin-top: 60px;
-  /* margin-bottom: 20px; */
-  animation: fadeInUp 1s ease-out;
-  max-width: 600px;
-  background-color: var(--clr-primary);
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* to make the text wrap around the image */
 }
-fieldset {
-  margin-bottom: 20px;
-  border: 1px solid var(--clr-secondary);
-  border-radius: 6px;
+.about .text {
+  flex: 3;
+  padding: 40px;
+  text-align: center;
+}
+.about .photos {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.about .photos img {
+  max-width: 100%;
   padding: 10px;
+  height: auto;
 }
-legend {
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--clr-accent);
-}
-.enquiy_labels {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 10px;
-  color: var(--clr-accent);
-}
-input,
-select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-  border: 1px solid var(--clr-secondary);
-  border-radius: 4px;
-  outline: none;
-  transition: background-color 0.3s;
-}
-input[type="submit"],
-input[type="reset"] {
-  display: inline-block;
-  background-color: var(--clr-primary);
-  color: var(--clr-secondary);
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 49%;
-}
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-  background-color: var(--clr-secondary);
-  color: var(--clr-primary);
-}
-input:hover,
-select:hover {
-  background-color: #f0f0f0;
-}
-input:invalid,
-select:invalid {
-  border-color: #ff0000;
-}
-table {
-  width: 100%;
-}
-td {
-  padding: 5px;
-}
-#required_warning {
-  color: red;
-  font-style: italic;
-  font-size: 14px;
-  text-align: right;
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
+@media (max-width: 768px) {
+  .about .text {
+    flex: 100%;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .about .photos {
+    flex: 100%;
+    flex-direction: column;
+    text-align: center;
   }
 }
-
-@media only screen and (max-width: 600px) {
-  .enquiry_labels {
-    width: 100%;
-  }
-}
-/* End of Enquiry form */
+/* End of About Section */
 
 /* Card Section */
 .card-h2 {
@@ -1078,10 +982,9 @@ td {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
   transition: background-color 0.3s ease; /* Smooth color transition */
 }
-/* Hover effect */
 .card-read-more:hover {
   background-color: var(--clr-secondary);
   color: var(--clr-primary);
@@ -1095,64 +998,104 @@ td {
     width: 100%;
   }
 }
-
 /* End of card */
 
-/* Acknowledgement */
-.acknowledgement-section {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px 0;
-  padding-top: 50px;
+/* Enquiry Form */
+
+.enquiry-article {
+  height: auto;
+  margin-bottom: 40px;
+}
+#enquiry_form {
+  min-height: 700px;
+  margin: auto;
+  margin-top: 60px;
+  /* margin-bottom: 20px; */
   animation: fadeInUp 1s ease-out;
-  background-color: #f3f3f3;
-}
-.acknowledgement-container {
-  max-width: 800px;
-  margin: 50px auto;
+  max-width: 600px;
+  background-color: var(--clr-primary);
   padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 40px;
+}
+fieldset {
+  margin-bottom: 20px;
+  border: 1px solid var(--clr-secondary);
+  border-radius: 6px;
+  padding: 10px;
+}
+legend {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--clr-accent);
+}
+.enquiy_labels {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  color: var(--clr-accent);
+}
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid var(--clr-secondary);
+  border-radius: 4px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+input[type="submit"],
+input[type="reset"] {
+  display: inline-block;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 49%;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+}
+input:hover,
+select:hover {
+  background-color: #f0f0f0;
+}
+input:invalid,
+select:invalid {
+  border-color: #ff0000;
+}
+table {
+  width: 100%;
+}
+td {
+  padding: 5px;
+}
+#required_warning {
+  color: red;
+  font-style: italic;
+  font-size: 14px;
+  text-align: right;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-.acknowledgements {
-  margin-top: 20px;
-  h2 {
-    margin-bottom: 10px;
-    font-size: 25px;
-  }
-
-  h3 {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-
-  a {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 14px;
-  }
-
-  a:hover {
-    text-decoration: underline;
+@media only screen and (max-width: 600px) {
+  .enquiry_labels {
+    width: 100%;
   }
 }
-/* End of Acknowledgement */
+/* End of Enquiry form */
 
 /* Volunteer Form */
 .volunteer-body {
@@ -1329,7 +1272,63 @@ td {
 }
 /* End of Volunteer Form */
 
-/*Start of CSS for footer*/
+/* Acknowledgement */
+.acknowledgement-section {
+  margin: 0;
+  padding: 20px 0;
+  padding-top: 50px;
+  animation: fadeInUp 1s ease-out;
+  background-color: #f3f3f3;
+}
+.acknowledgement-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+}
+.acknowledgements {
+  margin-top: 20px;
+  h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+/* End of Acknowledgement */
+
+/* footer */
+
 footer {
   background-color: var(--clr-secondary);
   padding: 3% 4%;
@@ -1445,5 +1444,4 @@ footer .container .row {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--clr-secondary);
 }
-
 /* End of Scroll Bar */
