@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>MSL - Activity Page</title>
     <meta charset="utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="Daniel Sie" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/style.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -16,33 +17,33 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header>
-      <a href="#" class="logo">MSL</a>
+      <a href="https://arekku21.github.io/MSL-Medical/" class="logo">MSL</a>
       <input class="side-menu" type="checkbox" id="side-menu" />
       <label class="hamb" for="side-menu"
         ><span class="hamb-line"></span
       ></label>
       <nav>
         <ul class="navbar">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li class="subnav">
             <a href="#">Services <i class="fa fa-caret-down"></i></a>
             <ul class="submenu">
-              <li><a href="#">BIM Class</a></li>
-              <li><a href="#">Car Wash</a></li>
-              <li><a href="#">Haircut & Trimming</a></li>
-              <li><a href="#">Sewing & Alteration</a></li>
+              <li><a href="service1.html">BIM Class</a></li>
+              <li><a href="service2.html">Car Wash</a></li>
+              <li><a href="service3.html">Haircut & Trimming</a></li>
+              <li><a href="service4.html">Sewing & Alteration</a></li>
             </ul>
           </li>
-          <li><a href="#">Activities</a></li>
+          <li><a href="activities.html">Activities</a></li>
           <li class="subnav">
             <a href="#">Forms <i class="fa fa-caret-down"></i></a>
             <ul class="submenu">
-              <li><a href="#">Enquiry</a></li>
-              <li><a href="#">Volunteer</a></li>
+              <li><a href="enquiry-service.html">Enquiry</a></li>
+              <li><a href="join-volunteer.html">Volunteer</a></li>
             </ul>
           </li>
           <li class="subnav">
@@ -59,12 +60,12 @@
       </nav>
     </header>
 
-    <article class="space">
+    <article class="space activities_section">
       <div class="card1">
         <input id="ch1" type="checkbox" />
         <div class="text">
-          <p>CHARITY FOOD FAIR &#127869; [07/04/2024]</p>
-          <p>"Taste the charity, it's delicious."</p>
+          <h1>CHARITY FOOD FAIR &#127869; [07/04/2024]</h1>
+          <h2>"Taste the charity, it's delicious."</h2>
         </div>
         <div class="content1">
           <div class="content_text">
@@ -99,7 +100,7 @@
               also:-
             </p>
             <div class="unordered">
-              <ul>
+              <ol id="activity_addition">
                 <li>
                   Set up a booth: Showcase your business or services at a
                   bazaar.
@@ -111,7 +112,7 @@
                 <li>
                   Cash Donation: Directly assist SSD&#39;s goals financially.
                 </li>
-              </ul>
+              </ol>
             </div>
             <br />
             <hr class="activity_line" />
@@ -132,13 +133,31 @@
             </div>
             <br />
             <hr class="activity_line" />
-            <p>&#91;SSD Charity Food Fair 2024&#93;</p>
-            <p>Date: 07/04/2024</p>
-            <p>Time: 8:00a.m. to 12:00p.m.</p>
-            <p>
-              Location: Association of Churches, Jalan Stampin, Kuching, Sarawak
-            </p>
-            <p>Email: ssdkuching1982@gmail.com</p>
+            <dl>
+              <dt>&#91;SSD Charity Food Fair 2024&#93;</dt>
+              <dd>
+                <table id="activity_detail">
+                  <tr>
+                    <th>Date:</th>
+                    <td>07/04/2024</td>
+                  </tr>
+                  <tr>
+                    <th>Time:</th>
+                    <td>8:00a.m. to 12:00p.m.</td>
+                  </tr>
+                  <tr>
+                    <th>Location:</th>
+                    <td>
+                      Association of Churches, Jalan Stampin, Kuching, Sarawak
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Email:</th>
+                    <td>ssdkuching1982@gmail.com</td>
+                  </tr>
+                </table>
+              </dd>
+            </dl>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.411045755735!2d110.34421479999999!3d1.5218199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31fba76940665d95%3A0xd41d7f8c99537582!2sAssociation%20of%20Churches%20in%20Sarawak!5e0!3m2!1sen!2smy!4v1710830899080!5m2!1sen!2smy"
               allowfullscreen=""
@@ -153,22 +172,24 @@
       <div class="card2">
         <input id="ch2" type="checkbox" />
         <div class="text">
-          <p>PINES SQUARE FAIR [26/01/2024 - 07/02/2024]</p>
+          <h1>PINES SQUARE FAIR [26/01/2024 - 07/02/2024]</h1>
         </div>
         <div class="content2">
           <div class="content_text">
+            <aside id="activity_aside">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.430580468989!2d110.3089454!3d1.51122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31fb095d5241459d%3A0x7448a49d54f86631!2sPINES%20SQUARE!5e0!3m2!1sen!2smy!4v1710831506517!5m2!1sen!2smy"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </aside>
             <p>
               Hi everyone! SSD is thrilled to be invited by MTPN to host our
               Deaf businesses at their Fair. Come check us out at Pines Square
               (opposite MJC Batu Kawa) – we are open from 7pm every night from
               26 January until 7 February (15 days)!
             </p>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.430580468989!2d110.3089454!3d1.51122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31fb095d5241459d%3A0x7448a49d54f86631!2sPINES%20SQUARE!5e0!3m2!1sen!2smy!4v1710831506517!5m2!1sen!2smy"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
           </div>
           <label class="extend" for="ch2">&#129033;</label>
         </div>
@@ -177,7 +198,7 @@
       <div class="card3">
         <input id="ch3" type="checkbox" />
         <div class="text">
-          <p>UNITY CHARITY AND CULTURE [13/01/2024]</p>
+          <h1>UNITY CHARITY AND CULTURE [13/01/2024]</h1>
         </div>
         <div class="content3">
           <div class="content_text">
@@ -215,17 +236,19 @@
       <div class="card4">
         <input id="ch4" type="checkbox" />
         <div class="text">
-          <p>THANK YOU FOR THE DONATION [13/01/2024]</p>
+          <h1>THANK YOU FOR THE DONATION [13/01/2024]</h1>
         </div>
         <div class="content4">
           <div class="content_text">
-            <p><img src="images/rice.jpg" alt="rice" class="activity_img" /></p>
-            <p>
-              Representatives from Kuching Buddhist Meditation handed over 30
-              bags of rice and one big packet of Bee Hoon to Sarawak Society for
-              the Deaf. SSD staff Amy Lau thanked and presented a token of
-              appreciation to them.
-            </p>
+            <figure>
+              <img src="images/rice.jpg" alt="rice" class="activity_img" />
+              <figcaption>
+                Representatives from Kuching Buddhist Meditation handed over 30
+                bags of rice and one big packet of Bee Hoon to Sarawak Society
+                for the Deaf. SSD staff Amy Lau thanked and presented a token of
+                appreciation to them.
+              </figcaption>
+            </figure>
           </div>
           <label class="extend" for="ch4">&#129033;</label>
         </div>
@@ -247,9 +270,9 @@
           <div class="footer-col">
             <h4>organization</h4>
             <ul>
-              <li><a href="#">activities</a></li>
-              <li><a href="#">enquiry</a></li>
-              <li><a href="#">join us</a></li>
+              <li><a href="activities.html">activities</a></li>
+              <li><a href="enquiry-service.html">enquiry</a></li>
+              <li><a href="join-volunteer.html">join us</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -282,7 +305,7 @@
             <a class="footer-essentials" href="acknowledgement.html"
               >Acknowledgements</a
             >
-            <a class="footer-essentials" href="enhancement.html"
+            <a class="footer-essentials" href="enhancement1.html"
               >Enhancements</a
             >
           </div>
