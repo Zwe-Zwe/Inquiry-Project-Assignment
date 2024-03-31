@@ -945,16 +945,16 @@ article {
   background-position: center;
 }
 .front-1 {
-  background-image: url(images/car_wash.jpg);
+  background-image: url(/images/car_wash.jpg);
 }
 .front-2 {
-  background-image: url(images/sewing.jpg);
+  background-image: url(/images/sewing.jpg);
 }
 .front-3 {
-  background-image: url(images/class.webp);
+  background-image: url(/images/class.webp);
 }
 .front-4 {
-  background-image: url(images/haircut.webp);
+  background-image: url(/images/haircut.webp);
 }
 .card-back {
   padding: 0 30px;
