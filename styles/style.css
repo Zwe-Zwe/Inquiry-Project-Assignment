@@ -13,6 +13,21 @@
   font-family: "Poppins", sans-serif;
 }
 
+h1{
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h3{
+  font-size: 22px;
+  font-weight: bold;
+}
+
 .space {
   padding-top: 5%;
   padding-left: 3%;
@@ -23,17 +38,30 @@
 /* iframe */
 
 #index_video {
-  display: flex;
+  display: block;
   justify-content: center; /* Horizontally center the iframe */
   margin-top: 50px;
   margin-bottom: 100px;
 }
+
+#index_video h2{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  color: var(--clr-secondary);
+  
+  
+}
+
 #index_video iframe {
   width: 1000px; /* Adjust the width as needed */
   height: 600px; /* Adjust the height as needed */
   border-radius: 30px;
   box-shadow: 0px 5px 15px grey;
   transition: transform 0.5s ease;
+  margin: auto;
+  display: flex;
 }
 #index_video iframe:hover {
   transform: scale(1.1); /* Scale up the iframe on hover */
@@ -59,14 +87,12 @@
 .servicesh2 {
   /*Styles for Heading 2 in Service Pages*/
   margin: 3% 3%;
-  font-size: 35px;
   color: #546da6;
 }
 .servicesh3 {
   /*Styles for Heading 3 in Service Pages*/
   margin-top: 2%;
   color: #968eaf;
-  font-size: 25px;
 }
 .servicesaside {
   /*Styles for aside element in Service Pages*/
@@ -747,15 +773,22 @@ html {
 
 /* SLIDER */
 
-article {
-  width: 100%;
-  height: 98vh;
+#slide_article {
+  width: 80%;
+  height: 88vh;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 5px solid var(--clr-secondary);
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+
+
 }
 .slider_container {
   position: relative;
-  margin-top: 0;
   width: 100%;
   height: 100%;
+  margin: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -779,21 +812,23 @@ article {
 .slide img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  
 }
 .slide .caption {
   position: absolute;
   left: 0;
   bottom: 5%;
-  font-size: 5rem;
-  font-weight: 600;
-  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--clr-primary);
   text-transform: capitalize;
   background: rgba(0, 0, 0, 0.348);
   backdrop-filter: blur(10px);
-  padding: 1rem 5rem;
+  padding: 1rem 1rem;
   border-radius: 0 2rem 2rem 0;
 }
-.slide.one {
+/* .slide.one {
   background: rgb(182, 19, 109);
 }
 .slide.two {
@@ -807,15 +842,39 @@ article {
 }
 .slide.five {
   background: rgb(173, 11, 188);
+} */
+
+@media  (max-width: 1250px) {
+
+  #slide_article{
+
+    height: 70vh;
+  }
 }
+
 @media (max-width: 850px) {
+
+  #slide_article{
+    height: 50vh;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+
   .slide .caption {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 700px) {
+
+  #slide_article{
+    height: 40vh;
+  }
+
   .slide .caption {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 @keyframes sliding {
@@ -864,10 +923,6 @@ article {
   text-align: center;
 }
 
-.about .text h2 {
-
-  font: 30px;
-}
 
 .about .text p{
   font-size: 14px;
@@ -900,7 +955,6 @@ article {
 /* Card Section */
 .card-h2 {
   text-align: center;
-  font-size: 24px;
   margin-top: 50px;
 }
 .card-section {
@@ -1015,7 +1069,6 @@ article {
 
 #enquiry_form h1{
   text-align: center;
-  font-size: 35px;
   color: var(--clr-secondary);
   margin-bottom: 10px;
 }
@@ -1135,8 +1188,6 @@ td {
   border-radius: 5px;
 }
 .volunteer-container .title {
-  font-size: 20px;
-  font-weight: 500;
   text-align: center;
 }
 .volunteer-form .user-details,
@@ -1314,19 +1365,16 @@ td {
   h1 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 40px;
   }
 }
 .acknowledgements {
   margin-top: 20px;
   h2 {
     margin-bottom: 10px;
-    font-size: 25px;
   }
 
   h3 {
     margin-bottom: 10px;
-    font-size: 16px;
   }
 
   ul {
