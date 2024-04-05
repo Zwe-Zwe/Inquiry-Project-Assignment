@@ -35,6 +35,7 @@ h3 {
   height: auto;
 }
 
+
 /* Profile */
 
 .profile-section {
@@ -469,8 +470,20 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
 /* End of Service Page Two */
 
 /*Start of CSS for phone navbar*/
-@media (max-width: 767px) {
-  .logo {
+@media (max-width: 900px) {
+
+  #logo_div{
+    display: none;
+  }
+
+  #res_logo{
+    width: 50px;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+
+  #logo {
     display: inline-block;
     color: black;
     font-size: 40px;
@@ -514,7 +527,8 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
     cursor: pointer;
     float: right;
     padding-top: 25px;
-    padding-right: 5%;
+    padding-right: 3%;
+    margin-top: 10px;
   } /* Style label tag */
 
   .hamb-line {
@@ -591,7 +605,36 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
 }
 /*End of CSS for phone navbar*/
 /*Start of CSS for navbar*/
-@media (min-width: 767px) {
+
+@media (min-width: 900px) {
+
+  #logo{
+    display: none;
+  }
+  #msl_logo{
+    width: 50px;
+    height: auto;
+    float: left;
+    margin-left: 10px;
+  }
+  .nav_div {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: left;
+  }
+  
+  #nav_menu {
+    margin-top: 20px;
+    width: 100%;
+  }
+  #logo_div{
+    left: 0;
+    padding: 5px;
+    width: 35%;
+    float: left;
+  }
+
   .navbar {
     align-items: center;
     text-align: center;
@@ -604,16 +647,21 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
     z-index: 998;
     background-color: white;
     margin: 0;
-    padding-top: 1.2%;
+    padding-top: 0;
     box-shadow: 0px 5px 15px grey;
     li {
-      display: inline-block;
+      /* display: inline-block; */
+      float: left;
       margin-right: 2%;
+      padding: 0 20px 0 20px;
+      list-style: none;
       transition: all 0.5s ease-in-out;
       &:hover {
         .submenu {
           height: 100%;
+          margin-top: 3px;
         }
+        
         a {
           color: #546da6;
           &::before {
@@ -626,6 +674,7 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
         overflow: hidden;
         position: absolute;
         left: 0;
+        margin-top: 3px;
         width: 100%;
         background-color: #546da6;
         height: 0;
@@ -635,6 +684,8 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
         transition-delay: 0.1s;
         box-shadow: 0px 5px 15px grey;
         z-index: 999;
+        display: flex; /* Align lists center */
+        justify-content: center; /* Align lists center */
         a {
           color: #ffffff;
           font-size: 15px;
@@ -645,6 +696,11 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
           }
         }
       }
+
+      .submenu li{
+        margin-top: 5px;
+      }
+      
       a {
         color: rgb(38, 38, 38);
         display: block;
@@ -676,9 +732,13 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 3%;
-  font-size: 12px;
   font-weight: bold;
 }
+
+.text h1,h2{
+  font-size: 16px;
+}
+
 .content_text {
   padding-left: 5%;
   padding-right: 5%;
@@ -896,10 +956,10 @@ html {
 /* SLIDER */
 
 #slide_article {
-  width: 80%;
-  height: 88vh;
+  width: 70%;
+  height: 80vh;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 70px;
   margin-bottom: 20px;
   border: 5px solid var(--clr-secondary);
   box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
@@ -1188,8 +1248,8 @@ html {
 }
 
 #enquiry-article {
-  height: 110vh;
-  margin-top: 40px;
+  height: auto;
+  margin-top: 100px;
   margin-bottom: 40px;
 }
 
@@ -1225,14 +1285,19 @@ legend {
 input,
 select {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
+  padding: 12px;
+  margin-top: 5px;
   box-sizing: border-box;
   border: 1px solid var(--clr-secondary);
   border-radius: 4px;
   outline: none;
   transition: background-color 0.3s;
 }
+
+input, select:last-child {
+  margin-bottom: 10px;
+}
+
 input[type="submit"],
 input[type="reset"] {
   display: inline-block;
@@ -1267,6 +1332,29 @@ td {
   font-size: 14px;
   text-align: right;
 }
+
+.contact-method {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 30px 0 30px 0;
+}
+
+#contact-method_text{
+  margin-top: 20px;
+}
+
+
+.contact-method label {
+  margin-right: 20px; /* Adjust the margin as needed */
+  font-size: 12px;
+}
+
+
+
+
+
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
