@@ -35,7 +35,6 @@ h3 {
   height: auto;
 }
 
-
 /* Profile */
 
 .profile-section {
@@ -471,12 +470,11 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
 
 /*Start of CSS for phone navbar*/
 @media (max-width: 900px) {
-
-  #logo_div{
+  #logo_div {
     display: none;
   }
 
-  #res_logo{
+  #res_logo {
     width: 50px;
     height: auto;
     margin-top: 15px;
@@ -607,11 +605,10 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
 /*Start of CSS for navbar*/
 
 @media (min-width: 900px) {
-
-  #logo{
+  #logo {
     display: none;
   }
-  #msl_logo{
+  #msl_logo {
     width: 50px;
     height: auto;
     float: left;
@@ -623,12 +620,12 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
     height: 60px;
     justify-content: left;
   }
-  
+
   #nav_menu {
     margin-top: 20px;
     width: 100%;
   }
-  #logo_div{
+  #logo_div {
     left: 0;
     padding: 5px;
     width: 35%;
@@ -661,7 +658,7 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
           height: 100%;
           margin-top: 3px;
         }
-        
+
         a {
           color: #546da6;
           &::before {
@@ -697,10 +694,10 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
         }
       }
 
-      .submenu li{
+      .submenu li {
         margin-top: 5px;
       }
-      
+
       a {
         color: rgb(38, 38, 38);
         display: block;
@@ -735,7 +732,8 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
   font-weight: bold;
 }
 
-.text h1,h2{
+.text h1,
+h2 {
   font-size: 16px;
 }
 
@@ -1090,7 +1088,7 @@ html {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  flex-wrap: wrap; /* to make the text wrap around the image */
+  flex-wrap: wrap; /* to make the text wrap around the image if necessary */
 }
 .about .text {
   flex: 3;
@@ -1199,10 +1197,6 @@ html {
   padding: 0 30px;
   position: relative;
 }
-.card-back span:hover > .card-read-more::before {
-  visibility: visible;
-  transform: scale(1, 1);
-}
 .card-back {
   background-color: var(--clr-secondary);
   transform: rotateY(180deg);
@@ -1230,9 +1224,6 @@ html {
 }
 
 @media (max-width: 800px) {
-  .card {
-    width: 100%;
-  }
   .card-row {
     width: 100%;
   }
@@ -1294,7 +1285,8 @@ select {
   transition: background-color 0.3s;
 }
 
-input, select:last-child {
+input,
+select:last-child {
   margin-bottom: 10px;
 }
 
@@ -1340,20 +1332,14 @@ td {
   margin: 30px 0 30px 0;
 }
 
-#contact-method_text{
+#contact-method_text {
   margin-top: 20px;
 }
-
 
 .contact-method label {
   margin-right: 20px; /* Adjust the margin as needed */
   font-size: 12px;
 }
-
-
-
-
-
 
 @keyframes fadeInUp {
   from {
@@ -1389,9 +1375,10 @@ td {
   background: var(--clr-primary);
   border-radius: 5px;
 }
-.volunteer-container .title {
+.volunteer-container h1 {
   text-align: center;
 }
+
 .volunteer-form .user-details,
 .volunteer-form .address-field {
   display: flex;
@@ -1399,19 +1386,25 @@ td {
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
+/* remove the default border of fieldset */
+.address-field {
+  border: none;
+}
 .user-details .input-box {
   margin-bottom: 15px;
   width: calc(100% / 2 - 20px);
 }
-.user-details .input-box .details,
+/* Styling the labels */
+.user-details .input-box label,
 .user-details .address-field legend,
 .volunteer-title {
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
 }
+/* Styling the input */
 .user-details .input-box input,
-.volunteer-details select {
+#volunteer-options {
   font-size: 16px;
   height: 45px;
   width: 100%;
@@ -1420,26 +1413,20 @@ td {
   border-radius: 5px;
   transition: all ease;
 }
-.address-field {
-  border: none;
-}
+
 .volunteer-details .category {
   display: flex;
   margin: 14px 0;
   justify-content: space-around;
 }
 .volunteer-details .category label {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  cursor: pointer;
-}
-.volunteer-details .category label {
   display: none;
+  cursor: pointer;
 }
 #volunteer-options:valid + .category label {
   display: flex;
 }
+/* Custom radio button using <span> */
 .volunteer-details .category .dot {
   height: 18px;
   width: 18px;
@@ -1449,27 +1436,25 @@ td {
   border-radius: 50%;
   transition: all 0.3s ease;
 }
+/* Hide the default radio buttons */
+#dot-1,
+#dot-2 {
+  display: none;
+}
 #dot-1:checked ~ .category label .one,
 #dot-2:checked ~ .category label .two {
   background: var(--clr-accent);
+}
+
+#dot-1:checked ~ .full-time-details,
+#dot-2:checked ~ .part-time-details {
+  display: block;
+  margin-bottom: 3%;
 }
 .full-time-details,
 .part-time-details {
   display: none;
 }
-#dot-1:checked ~ .full-time-details {
-  display: block;
-  margin-bottom: 3%;
-}
-#dot-2:checked ~ .part-time-details {
-  display: block;
-  margin-bottom: 3%;
-}
-#dot-1,
-#dot-2 {
-  display: none;
-}
-
 .part-time-details input[type="checkbox"] {
   width: 5%;
 }
@@ -1483,6 +1468,7 @@ td {
 .part-time-details p {
   margin: 2% 0;
 }
+
 .reason-to-volunteer textarea {
   font-size: 16px;
   width: 100%;
@@ -1495,6 +1481,16 @@ td {
 }
 .reason-to-volunteer textarea:invalid {
   border-color: #ff0000;
+}
+.reason-to-volunteer textarea {
+  border: 2px solid var(--clr-secondary);
+}
+.volunteer-form .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.volunteer-form .buttons .button {
+  width: 45%;
 }
 .volunteer-form .button {
   height: 45px;
@@ -1518,13 +1514,6 @@ td {
   background: var(--clr-secondary);
 }
 
-.volunteer-form .buttons {
-  display: flex;
-  justify-content: space-around;
-}
-.volunteer-form .buttons .button {
-  width: 45%;
-}
 @media (max-width: 700px) {
   .volunteer-container {
     width: 100%;
@@ -1543,7 +1532,7 @@ td {
 }
 @media (max-width: 584px) {
   .user-details .input-box input,
-  select form .volunteer-title {
+  .volunteer-title {
     font-size: 13.5px;
   }
 }
