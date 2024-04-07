@@ -1553,11 +1553,12 @@ td {
   border-color: #ff0000;
 }
 .reason-to-volunteer textarea {
-  border: 2px solid var(--clr-secondary);
+  border: 1px solid var(--clr-secondary);
 }
 .volunteer-form .buttons {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 3%;
 }
 .volunteer-form .buttons .button {
   width: 45%;
