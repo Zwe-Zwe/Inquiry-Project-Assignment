@@ -199,21 +199,19 @@ button a {
 @media (max-width: 1050px) {
   /* changed from width:150px */
   #pic img {
-    /* added */
     display: block;
     margin: 0 auto;
     min-width: 125px;
   }
   #cpt {
-    display: block; /* added */
+    display: block;
     color: white;
-    width: 30%; /* changed */
+    width: 30%;
     height: 10%;
-    padding: 2em 1em 0em 1em; /* changed */
+    padding: 2em 1em 0em 1em;
     opacity: 0%;
-    left: 35%; /* changed */
+    left: 35%;
     position: absolute;
-    /* margin-left: 3em; */
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
@@ -227,17 +225,11 @@ button a {
   }
 }
 
-/* End of Profile */
-
-/* Paing */
-
-.paing {
-  background-color: rgb(0, 0, 0);
-  color: #ffff;
-
+.zwe{
+  background-color: #77dd77;
 }
 
-/* End of Paing */
+/* End of Profile */
 
 /* iframe */
 
@@ -257,8 +249,8 @@ button a {
 }
 
 #index_video iframe {
-  width: 1000px; /* Adjust the width as needed */
-  height: 600px; /* Adjust the height as needed */
+  width: 1000px; 
+  height: 600px;
   border-radius: 30px;
   box-shadow: 0px 5px 15px grey;
   transition: transform 0.5s ease;
@@ -271,13 +263,13 @@ button a {
 }
 @media screen and (max-width: 1024px) {
   #index_video iframe {
-    width: 800px; /* Adjust the width as needed */
-    height: 500px; /* Adjust the height as needed */
+    width: 800px;
+    height: 500px;
   }
   @media screen and (max-width: 768px) {
     #index_video iframe {
-      width: 600px; /* Adjust the width as needed */
-      height: 400px; /* Adjust the height as needed */
+      width: 600px;
+      height: 400px;
     }
   }
 }
@@ -1085,21 +1077,6 @@ html {
   padding: 1rem 1rem;
   border-radius: 0 2rem 2rem 0;
 }
-/* .slide.one {
-  background: rgb(182, 19, 109);
-}
-.slide.two {
-  background: rgb(255, 64, 64);
-}
-.slide.three {
-  background: rgb(11, 173, 188);
-}
-.slide.four {
-  background: rgb(11, 188, 14);
-}
-.slide.five {
-  background: rgb(173, 11, 188);
-} */
 
 @media (max-width: 1250px) {
   #slide_article {
@@ -1563,12 +1540,11 @@ td {
   border-color: #ff0000;
 }
 .reason-to-volunteer textarea {
-  border: 1px solid var(--clr-secondary);
+  border: 2px solid var(--clr-secondary);
 }
 .volunteer-form .buttons {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 3%;
 }
 .volunteer-form .buttons .button {
   width: 45%;
