@@ -37,123 +37,193 @@ h3 {
 
 /* Profile */
 
-.profile-section {
+#profile-page {
+  /* gave it an id instead of body */
+  margin-top: 8%;
   display: flex;
   flex-direction: column;
   gap: 1px;
-  div {
-    width: 50%;
+}
+#title,
+#pic,
+#credentials,
+#table,
+#email {
+  height: auto; /* changed from 200px */
+  width: 50%;
+  margin: 0 auto;
+}
+#title {
+  font-size: 175%;
+  text-shadow: 1px 1px #808080;
+  color: #000;
+  width: 30%;
+  height: 10%;
+  text-align: center;
+  min-width: 400px;
+}
+#name {
+  font-size: 200%;
+  font-weight: bold;
+}
+#student_id,
+#course {
+  font-size: 100%;
+}
+#student_id {
+  font-family: Arial, sans-serif; /* Arial font */
+}
+#course {
+  color: rgb(38, 0, 255); /* colour for the course */
+}
+#pic {
+  width: 30%;
+  height: 10%;
+}
+#pic img {
+  width: 38%;
+  height: 75%;
+  /* min-width:125px; */
+  margin: 0 auto;
+  position: relative;
+  margin-left: 31%;
+  z-index: -1;
+  border-radius: 0.5em;
+  border: 3px groove rgb(0, 0, 0); /* groove border */
+}
+#cpt:hover ~ #pfp {
+  transform: scale(1.2);
+  -webkit-filter: brightness(10%);
+  -webkit-filter: blur(200%);
+  filter: brightness(10%), blur(200%); /* added */
+  -webkit-transition: all 1.6s ease;
+  -o-transition: all 1.6s ease;
+  transition: all 1.6s ease;
+}
+#cpt {
+  color: white;
+  min-width: 100px;
+  width: 12%;
+  height: 70%;
+  padding: 1.5em 0.1em 0em 0.1em;
+  opacity: 0%;
+  position: absolute;
+  left: 44.3%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+  font-size: 15px;
+  text-align: center;
+}
+#cpt p {
+  font-size: 82%;
+}
+#cpt:hover {
+  -webkit-opacity: 100%;
+  opacity: 100%;
+}
+
+#credentials {
+  text-align: center;
+  margin: 0 auto;
+  height: 10%;
+  min-width: 500px;
+  padding-top: 1em;
+}
+#credentials p {
+  margin-top: 7px;
+  margin-bottom: 1px;
+}
+#info_t {
+  margin: auto;
+  box-shadow: 0.5rem 0.5rem #0005;
+  background-color: #fffb;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 50%;
+}
+#table {
+  height: 100%;
+  min-width: 450px;
+}
+#info_t th {
+  text-align: right;
+  padding-right: 0.6em;
+}
+#info_t td {
+  padding: 0.6em;
+  padding-left: 0.7em;
+}
+.odd {
+  background-color: var(--clr-secondary);
+  color: #ffff;
+}
+.even {
+  background-color: var(--clr-primary);
+  color: #000000;
+}
+#email {
+  text-align: center;
+  margin-bottom: 2%;
+}
+button {
+  width: 25%;
+  height: 15%;
+  margin: 0 auto;
+  border-radius: 1.7em;
+  border: 2px solid var(--clr-secondary);
+  color: #000000;
+  min-width: 150px;
+}
+button:hover {
+  background-color: var(--clr-secondary);
+  transition: all 0.1s ease;
+}
+button:hover a {
+  color: white;
+}
+button a {
+  text-decoration: none;
+  color: black;
+}
+.odd:hover,
+.even:hover {
+  transform: scale(1.1);
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  box-shadow: 0px 1px 5px gray;
+}
+
+@media (max-width: 1050px) {
+  /* changed from width:150px */
+  #pic img {
+    /* added */
+    display: block;
     margin: 0 auto;
+    min-width: 125px;
   }
-  .title {
-    font-size: 175%;
-    text-shadow: 1px 1px #808080;
-    color: #000;
-    width: 30%;
-    height: 10%;
-    text-align: center;
-  }
-  .pic {
-    width: 30%;
-    height: 10%;
-  }
-  .pic img {
-    max-width: 38%;
-    max-height: 75%;
-    margin: 0 auto;
-    position: relative;
-    left: 35%;
-    z-index: -1;
-    border-radius: 0.5em;
-  }
-  .cpt:hover ~ .pfp {
-    transform: scale(1.2);
-    -webkit-filter: brightness(40%);
-    -webkit-filter: blur(200%);
-    filter: brightness(40%) blur(200%);
-    -webkit-transition: all 3s ease;
-    -o-transition: all 3s ease;
-    transition: all 3s ease;
-  }
-  .cpt {
+  #cpt {
+    display: block; /* added */
     color: white;
-    width: 10%;
+    width: 30%; /* changed */
     height: 10%;
-    padding: 2em 0.5em 0em 0.5em;
+    padding: 2em 1em 0em 1em; /* changed */
     opacity: 0%;
+    left: 35%; /* changed */
     position: absolute;
-    left: 46%;
+    /* margin-left: 3em; */
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     z-index: 1;
+    font-size: 13px;
+    text-align: center;
   }
-  .cpt:hover {
+  #cpt:hover {
     -webkit-opacity: 100%;
     opacity: 100%;
-  }
-  .cpt p {
-    font-size: 10.8px;
-  }
-  .credentials {
-    text-align: center;
-    height: 10%;
-  }
-  .credentials p {
-    margin-top: 7px;
-    margin-bottom: 1px;
-  }
-  .name {
-    font-size: 200%;
-    font-weight: bold;
-  }
-  .student_id,
-  .course {
-    font-size: 100%;
-  }
-  .info_t {
-    margin: auto;
-    box-shadow: 0.5rem 0.7rem #0005;
-    background-color: #fffb;
-    border-radius: 0.7em;
-    border-collapse: collapse;
-    font-size: 12px;
-    min-width: 50%;
-  }
-  th {
-    text-align: right;
-    padding-right: 0.6em;
-  }
-  td {
-    padding: 0.4em;
-    padding-left: 0.7em;
-  }
-  .odd {
-    background-color: var(--clr-secondary);
-    color: #ffff;
-  }
-  .email {
-    text-align: center;
-  }
-  button {
-    width: 25%;
-    height: 15%;
-    margin: 0 auto 20px;
-    border-radius: 1.7em;
-    border: 2px solid var(--clr-secondary);
-    color: #000000;
-  }
-  button:hover {
-    background-color: var(--clr-secondary);
-    transition: all 0.1s ease;
-    cursor: pointer;
-  }
-  button:hover a {
-    color: white;
-  }
-  button a {
-    text-decoration: none;
-    color: black;
   }
 }
 
