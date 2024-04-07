@@ -35,126 +35,195 @@ h3 {
   height: auto;
 }
 
-
 /* Profile */
 
-.profile-section {
+#profile-page {
+  /* gave it an id instead of body */
+  margin-top: 8%;
   display: flex;
   flex-direction: column;
   gap: 1px;
-  div {
-    width: 50%;
+}
+#title,
+#pic,
+#credentials,
+#table,
+#email {
+  height: auto; /* changed from 200px */
+  width: 50%;
+  margin: 0 auto;
+}
+#title {
+  font-size: 175%;
+  text-shadow: 1px 1px #808080;
+  color: #000;
+  width: 30%;
+  height: 10%;
+  text-align: center;
+  min-width: 400px;
+}
+#name {
+  font-size: 200%;
+  font-weight: bold;
+}
+#student_id,
+#course {
+  font-size: 100%;
+}
+#student_id {
+  font-family: Arial, sans-serif; /* Arial font */
+}
+#course {
+  color: rgb(38, 0, 255); /* colour for the course */
+}
+#pic {
+  width: 30%;
+  height: 10%;
+}
+#pic img {
+  width: 38%;
+  height: 75%;
+  /* min-width:125px; */
+  margin: 0 auto;
+  position: relative;
+  margin-left: 31%;
+  z-index: -1;
+  border-radius: 0.5em;
+  border: 3px groove rgb(0, 0, 0); /* groove border */
+}
+#cpt:hover ~ #pfp {
+  transform: scale(1.2);
+  -webkit-filter: brightness(10%);
+  -webkit-filter: blur(200%);
+  filter: brightness(10%), blur(200%); /* added */
+  -webkit-transition: all 1.6s ease;
+  -o-transition: all 1.6s ease;
+  transition: all 1.6s ease;
+}
+#cpt {
+  color: white;
+  min-width: 100px;
+  width: 12%;
+  height: 70%;
+  padding: 1.5em 0.1em 0em 0.1em;
+  opacity: 0%;
+  position: absolute;
+  left: 44.3%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+  font-size: 15px;
+  text-align: center;
+}
+#cpt p {
+  font-size: 82%;
+}
+#cpt:hover {
+  -webkit-opacity: 100%;
+  opacity: 100%;
+}
+
+#credentials {
+  text-align: center;
+  margin: 0 auto;
+  height: 10%;
+  min-width: 500px;
+  padding-top: 1em;
+}
+#credentials p {
+  margin-top: 7px;
+  margin-bottom: 1px;
+}
+#info_t {
+  margin: auto;
+  box-shadow: 0.5rem 0.5rem #0005;
+  background-color: #fffb;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 50%;
+}
+#table {
+  height: 100%;
+  min-width: 450px;
+}
+#info_t th {
+  text-align: right;
+  padding-right: 0.6em;
+}
+#info_t td {
+  padding: 0.6em;
+  padding-left: 0.7em;
+}
+.odd {
+  background-color: var(--clr-secondary);
+  color: #ffff;
+}
+.even {
+  background-color: var(--clr-primary);
+  color: #000000;
+}
+#email {
+  text-align: center;
+  margin-bottom: 2%;
+}
+button {
+  width: 25%;
+  height: 15%;
+  margin: 0 auto;
+  border-radius: 1.7em;
+  border: 2px solid var(--clr-secondary);
+  color: #000000;
+  min-width: 150px;
+}
+button:hover {
+  background-color: var(--clr-secondary);
+  transition: all 0.1s ease;
+}
+button:hover a {
+  color: white;
+}
+button a {
+  text-decoration: none;
+  color: black;
+}
+.odd:hover,
+.even:hover {
+  transform: scale(1.1);
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  box-shadow: 0px 1px 5px gray;
+}
+
+@media (max-width: 1050px) {
+  /* changed from width:150px */
+  #pic img {
+    /* added */
+    display: block;
     margin: 0 auto;
+    min-width: 125px;
   }
-  .title {
-    font-size: 175%;
-    text-shadow: 1px 1px #808080;
-    color: #000;
-    width: 30%;
-    height: 10%;
-    text-align: center;
-  }
-  .pic {
-    width: 30%;
-    height: 10%;
-  }
-  .pic img {
-    max-width: 38%;
-    max-height: 75%;
-    margin: 0 auto;
-    position: relative;
-    left: 35%;
-    z-index: -1;
-    border-radius: 0.5em;
-  }
-  .cpt:hover ~ .pfp {
-    transform: scale(1.2);
-    -webkit-filter: brightness(40%);
-    -webkit-filter: blur(200%);
-    filter: brightness(40%) blur(200%);
-    -webkit-transition: all 3s ease;
-    -o-transition: all 3s ease;
-    transition: all 3s ease;
-  }
-  .cpt {
+  #cpt {
+    display: block; /* added */
     color: white;
-    width: 10%;
+    width: 30%; /* changed */
     height: 10%;
-    padding: 2em 0.5em 0em 0.5em;
+    padding: 2em 1em 0em 1em; /* changed */
     opacity: 0%;
+    left: 35%; /* changed */
     position: absolute;
-    left: 46%;
+    /* margin-left: 3em; */
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     z-index: 1;
+    font-size: 13px;
+    text-align: center;
   }
-  .cpt:hover {
+  #cpt:hover {
     -webkit-opacity: 100%;
     opacity: 100%;
-  }
-  .cpt p {
-    font-size: 10.8px;
-  }
-  .credentials {
-    text-align: center;
-    height: 10%;
-  }
-  .credentials p {
-    margin-top: 7px;
-    margin-bottom: 1px;
-  }
-  .name {
-    font-size: 200%;
-    font-weight: bold;
-  }
-  .student_id,
-  .course {
-    font-size: 100%;
-  }
-  .info_t {
-    margin: auto;
-    box-shadow: 0.5rem 0.7rem #0005;
-    background-color: #fffb;
-    border-radius: 0.7em;
-    border-collapse: collapse;
-    font-size: 12px;
-    min-width: 50%;
-  }
-  th {
-    text-align: right;
-    padding-right: 0.6em;
-  }
-  td {
-    padding: 0.4em;
-    padding-left: 0.7em;
-  }
-  .odd {
-    background-color: var(--clr-secondary);
-    color: #ffff;
-  }
-  .email {
-    text-align: center;
-  }
-  button {
-    width: 25%;
-    height: 15%;
-    margin: 0 auto 20px;
-    border-radius: 1.7em;
-    border: 2px solid var(--clr-secondary);
-    color: #000000;
-  }
-  button:hover {
-    background-color: var(--clr-secondary);
-    transition: all 0.1s ease;
-    cursor: pointer;
-  }
-  button:hover a {
-    color: white;
-  }
-  button a {
-    text-decoration: none;
-    color: black;
   }
 }
 
@@ -471,12 +540,11 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
 
 /*Start of CSS for phone navbar*/
 @media (max-width: 900px) {
-
-  #logo_div{
+  #logo_div {
     display: none;
   }
 
-  #res_logo{
+  #res_logo {
     width: 50px;
     height: auto;
     margin-top: 15px;
@@ -607,11 +675,10 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
 /*Start of CSS for navbar*/
 
 @media (min-width: 900px) {
-
-  #logo{
+  #logo {
     display: none;
   }
-  #msl_logo{
+  #msl_logo {
     width: 50px;
     height: auto;
     float: left;
@@ -623,12 +690,12 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
     height: 60px;
     justify-content: left;
   }
-  
+
   #nav_menu {
     margin-top: 20px;
     width: 100%;
   }
-  #logo_div{
+  #logo_div {
     left: 0;
     padding: 5px;
     width: 35%;
@@ -661,7 +728,7 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
           height: 100%;
           margin-top: 3px;
         }
-        
+
         a {
           color: #546da6;
           &::before {
@@ -697,10 +764,10 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
         }
       }
 
-      .submenu li{
+      .submenu li {
         margin-top: 5px;
       }
-      
+
       a {
         color: rgb(38, 38, 38);
         display: block;
@@ -735,7 +802,8 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
   font-weight: bold;
 }
 
-.text h1,h2{
+.text h1,
+h2 {
   font-size: 16px;
 }
 
@@ -1090,7 +1158,7 @@ html {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  flex-wrap: wrap; /* to make the text wrap around the image */
+  flex-wrap: wrap; /* to make the text wrap around the image if necessary */
 }
 .about .text {
   flex: 3;
@@ -1199,10 +1267,6 @@ html {
   padding: 0 30px;
   position: relative;
 }
-.card-back span:hover > .card-read-more::before {
-  visibility: visible;
-  transform: scale(1, 1);
-}
 .card-back {
   background-color: var(--clr-secondary);
   transform: rotateY(180deg);
@@ -1230,9 +1294,6 @@ html {
 }
 
 @media (max-width: 800px) {
-  .card {
-    width: 100%;
-  }
   .card-row {
     width: 100%;
   }
@@ -1294,7 +1355,8 @@ select {
   transition: background-color 0.3s;
 }
 
-input, select:last-child {
+input,
+select:last-child {
   margin-bottom: 10px;
 }
 
@@ -1340,20 +1402,14 @@ td {
   margin: 30px 0 30px 0;
 }
 
-#contact-method_text{
+#contact-method_text {
   margin-top: 20px;
 }
-
 
 .contact-method label {
   margin-right: 20px; /* Adjust the margin as needed */
   font-size: 12px;
 }
-
-
-
-
-
 
 @keyframes fadeInUp {
   from {
@@ -1389,9 +1445,10 @@ td {
   background: var(--clr-primary);
   border-radius: 5px;
 }
-.volunteer-container .title {
+.volunteer-container h1 {
   text-align: center;
 }
+
 .volunteer-form .user-details,
 .volunteer-form .address-field {
   display: flex;
@@ -1399,19 +1456,25 @@ td {
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
+/* remove the default border of fieldset */
+.address-field {
+  border: none;
+}
 .user-details .input-box {
   margin-bottom: 15px;
   width: calc(100% / 2 - 20px);
 }
-.user-details .input-box .details,
+/* Styling the labels */
+.user-details .input-box label,
 .user-details .address-field legend,
 .volunteer-title {
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
 }
+/* Styling the input */
 .user-details .input-box input,
-.volunteer-details select {
+#volunteer-options {
   font-size: 16px;
   height: 45px;
   width: 100%;
@@ -1420,26 +1483,20 @@ td {
   border-radius: 5px;
   transition: all ease;
 }
-.address-field {
-  border: none;
-}
+
 .volunteer-details .category {
   display: flex;
   margin: 14px 0;
   justify-content: space-around;
 }
 .volunteer-details .category label {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  cursor: pointer;
-}
-.volunteer-details .category label {
   display: none;
+  cursor: pointer;
 }
 #volunteer-options:valid + .category label {
   display: flex;
 }
+/* Custom radio button using <span> */
 .volunteer-details .category .dot {
   height: 18px;
   width: 18px;
@@ -1449,27 +1506,25 @@ td {
   border-radius: 50%;
   transition: all 0.3s ease;
 }
+/* Hide the default radio buttons */
+#dot-1,
+#dot-2 {
+  display: none;
+}
 #dot-1:checked ~ .category label .one,
 #dot-2:checked ~ .category label .two {
   background: var(--clr-accent);
+}
+
+#dot-1:checked ~ .full-time-details,
+#dot-2:checked ~ .part-time-details {
+  display: block;
+  margin-bottom: 3%;
 }
 .full-time-details,
 .part-time-details {
   display: none;
 }
-#dot-1:checked ~ .full-time-details {
-  display: block;
-  margin-bottom: 3%;
-}
-#dot-2:checked ~ .part-time-details {
-  display: block;
-  margin-bottom: 3%;
-}
-#dot-1,
-#dot-2 {
-  display: none;
-}
-
 .part-time-details input[type="checkbox"] {
   width: 5%;
 }
@@ -1483,6 +1538,7 @@ td {
 .part-time-details p {
   margin: 2% 0;
 }
+
 .reason-to-volunteer textarea {
   font-size: 16px;
   width: 100%;
@@ -1495,6 +1551,16 @@ td {
 }
 .reason-to-volunteer textarea:invalid {
   border-color: #ff0000;
+}
+.reason-to-volunteer textarea {
+  border: 2px solid var(--clr-secondary);
+}
+.volunteer-form .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.volunteer-form .buttons .button {
+  width: 45%;
 }
 .volunteer-form .button {
   height: 45px;
@@ -1518,13 +1584,6 @@ td {
   background: var(--clr-secondary);
 }
 
-.volunteer-form .buttons {
-  display: flex;
-  justify-content: space-around;
-}
-.volunteer-form .buttons .button {
-  width: 45%;
-}
 @media (max-width: 700px) {
   .volunteer-container {
     width: 100%;
@@ -1543,7 +1602,7 @@ td {
 }
 @media (max-width: 584px) {
   .user-details .input-box input,
-  select form .volunteer-title {
+  .volunteer-title {
     font-size: 13.5px;
   }
 }
