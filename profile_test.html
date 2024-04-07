@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MSL Profile Page</title>
+    <title>Malaysian Sign Language</title>
     <meta charset="utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <meta name="author" content="Michael" />
+    <meta name="author" content="Daniel Sie, Zwe Htet Zaw, Paing Chan" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="images/love-you-gesture-svgrepo-com.svg"
+      type="images/svg"
+    />
     <link rel="stylesheet" href="styles/style.css" />
     <link
       rel="stylesheet"
@@ -18,6 +23,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
+
   <body>
     <header>
       <a href="https://arekku21.github.io/MSL-Medical/" id="logo"
@@ -73,91 +79,89 @@
       </nav>
     </header>
 
-    <article id="profile-page">
-      <!--Picture and credentials section-->
-      <section>
-        <div id="title">Student Profile Page</div>
-
-        <br />
-
-        <!--padding in between sections-->
-        <div id="pic">
-          <span id="cpt">
-            <span
-              ><p>
-                Hi! I'm Zwe Htet Zaw and currently a first-year Computer Science
-                Degree student in Swinburne, Sarawak.
-              </p></span
-            >
-          </span>
-          <img src="images/zwezwe.jpg" alt="Picture of Paing" id="pfp" />
+    <article id="profile_article">
+        <h1>Student Profile Page</h1>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img id="profile_img" src="images/zweiscool.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <p>Live with intention, love with passion, lead with integrity, and inspire with authenticity.</p>
+            </div>
+          </div>
         </div>
-
-        <div id="credentials">
-          <p id="name">Zwe Htet Zaw</p>
-          <p id="student_id">102783659</p>
-          <p id="course">Bachelor of Computer Science</p>
-        </div>
-      </section>
-
-      <br />
-
-      <!--Information section-->
-      <section>
-        <div id="table">
-          <table id="info_t">
-            <tr class="odd zwe">
-              <th>Age</th>
-              <td>21</td>
+        
+        <h2>Zwe Htet Zaw</h2>
+        <h3>102883659</h3>
+        <h3>Computer Science</h3>
+        
+        <table id="profile_table">       
+            <tr>
+                <th>Age</th>
+                <td class="profile_tab_dash">-</td>
+                <td>21</td>
             </tr>
-
-            <tr class="even">
-              <th>Gender</th>
-              <td>Male</td>
+            <tr>
+                <th>Gender</th>
+                <td class="profile_tab_dash">-</td>
+                <td>Male</td>
             </tr>
-
-            <tr class="odd zwe">
-              <th>Nationality</th>
-              <td>Myanmar</td>
+            <tr>
+                <th>Nationality</th>
+                <td class="profile_tab_dash">-</td>
+                <td>Myanmar</td>
             </tr>
-
-            <tr class="even">
-              <th>Description of Hometown</th>
-              <td>
-                I am from Monywa, a bustling town located in Central Myanmar.
-              </td>
+            <tr>
+                <th>Description of Hometwon</th>
+                <td class="profile_tab_dash">-</td>
+                <td>Monywa, located in Myanmar's Sagaing Region, is known for its cultural landmarks, including Thanboddhay Pagoda and Bodhi Tahtaung Pagoda. It's a serene destination rich in history, drawing visitors for its cultural significance.</td>
             </tr>
-
-            <tr class="odd zwe">
-              <th>A Great Achievement</th>
-              <td>
-                I am proud of seizing the opportunity to contribute to the ever-evolving IT society
-              </td>
+            <tr>
+                <th>Great Achievement of Life</th>
+                <td class="profile_tab_dash">-</td>
+                <td></td>
             </tr>
-
-            <tr class="even">
-              <th>Some things I enjoy!</th>
-              <td>
-                I find joy in listening to music, exploring movies across various genres, and immersing myself in captivating games.
-              </td>
+            <tr>
+                <th>Hobby</th>
+                <td class="profile_tab_dash">-</td>
+                <td>I love playing MOBA games especially Dota2</td>
             </tr>
-          </table>
-        </div>
-      </section>
-
-      <br /><br />
-
-      <!--Email section-->
-      <section>
-        <div id="email">
-          <button>
-            <a href="mailto:102783659@students.swinburne.edu.my">
-              Contact Me
+            <tr>
+                <th>Favourite Movie</th>
+                <td class="profile_tab_dash">-</td>
+                <td>Schindler's List</td>
+            </tr>
+            <tr>
+                <th>Favourite Song</th>
+                <td class="profile_tab_dash">-</td>
+                <td>Till Kingdom Come by Coldplay</td>
+            </tr>
+            <tr>
+                <th>Favourite Book</th>
+                <td class="profile_tab_dash">-</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Favourite Sport</th>
+                <td class="profile_tab_dash">-</td>
+                <td>Badminton and Soccer</td>
+            </tr> 
+        </table>
+        <div id="profile_icons">
+          <a href="https://wa.me/qr/7OBO3IQIVW45L1"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          <a href="mailto:102783659@students.swinburne.edu.my"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+            <a href="https://www.instagram.com/zwe_hyhy/">
+              <i class="fa-brands fa-instagram"></i>
             </a>
-          </button>
-        </div>
-      </section>
+      </div>
     </article>
+
+    <a href="#" class="top">Back To Top</a>
 
     <footer>
       <div class="container">
@@ -218,4 +222,3 @@
       </div>
     </footer>
   </body>
-</html>
