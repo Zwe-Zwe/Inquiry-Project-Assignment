@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <meta name="author" content="Michael Wong" />
+    <meta name="author" content="Michael" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles/style.css" />
     <link
@@ -18,116 +18,145 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
-
   <body>
     <header>
-      <a href="https://arekku21.github.io/MSL-Medical/" class="logo">MSL</a>
+      <a href="https://arekku21.github.io/MSL-Medical/" id="logo"
+        ><img id="res_logo" src="images/logo2.png"
+      /></a>
       <input class="side-menu" type="checkbox" id="side-menu" />
       <label class="hamb" for="side-menu"
         ><span class="hamb-line"></span
       ></label>
       <nav>
         <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li class="subnav">
-            <a href="#">Services <i class="fa fa-caret-down"></i></a>
-            <ul class="submenu">
-              <li><a href="service1.html">BIM Class</a></li>
-              <li><a href="service2.html">Car Wash</a></li>
-              <li><a href="service3.html">Haircut & Trimming</a></li>
-              <li><a href="service4.html">Sewing & Alteration</a></li>
-            </ul>
-          </li>
-          <li><a href="activities.html">Activities</a></li>
-          <li class="subnav">
-            <a href="#">Forms <i class="fa fa-caret-down"></i></a>
-            <ul class="submenu">
-              <li><a href="enquiry-service.html">Enquiry</a></li>
-              <li><a href="join-volunteer.html">Volunteer</a></li>
-            </ul>
-          </li>
-          <li class="subnav">
-            <a href="#">About Us <i class="fa fa-caret-down"></i></a>
-            <ul class="submenu">
-              <li><a href="#">&#128100; Daniel Sie</a></li>
-              <li><a href="#">&#128100; Michael Wong</a></li>
-              <li><a href="#">&#128100; Paing Chan</a></li>
-              <li><a href="#">&#128100; Sherlyn Kok</a></li>
-              <li><a href="#">&#128100; Zwe Htet Zaw</a></li>
-            </ul>
-          </li>
+          <div class="nav_div">
+            <div id="logo_div">
+              <a href="index.html"
+                ><img
+                  src="images/logo2.png"
+                  alt="Sarawak Society for the Deaf"
+                  id="msl_logo"
+              /></a>
+            </div>
+            <div id="nav_menu">
+              <li><a href="index.html">Home</a></li>
+              <li class="subnav">
+                <a href="#">Services <i class="fa fa-caret-down"></i></a>
+                <ul class="submenu">
+                  <li><a href="service1.html">BIM Class</a></li>
+                  <li><a href="service2.html">Car Wash</a></li>
+                  <li><a href="service3.html">Haircut & Trimming</a></li>
+                  <li><a href="service4.html">Sewing & Alteration</a></li>
+                </ul>
+              </li>
+              <li><a href="activities.html">Activities</a></li>
+              <li class="subnav">
+                <a href="#">Forms <i class="fa fa-caret-down"></i></a>
+                <ul class="submenu">
+                  <li><a href="enquiry-service.html">Enquiry</a></li>
+                  <li><a href="join-volunteer.html">Volunteer</a></li>
+                </ul>
+              </li>
+              <li class="subnav">
+                <a href="#">About Us <i class="fa fa-caret-down"></i></a>
+                <ul class="submenu">
+                  <li><a href="daniel.html">&#128100; Daniel Sie</a></li>
+                  <li><a href="michael.html">&#128100; Michael Wong</a></li>
+                  <li><a href="paing.html">&#128100; Paing Chan</a></li>
+                  <li><a href="sherlyn.html">&#128100; Sherlyn Kok</a></li>
+                  <li><a href="zwe.html">&#128100; Zwe Htet Zaw</a></li>
+                </ul>
+              </li>
+            </div>
+          </div>
         </ul>
       </nav>
     </header>
 
-    <section class="profile-section space">
-      <div class="title">Student Profile Page</div>
+    <article id="profile-page">
+      <!--Picture and credentials section-->
+      <section>
+        <div id="title">Student Profile Page</div>
+
+        <br />
+
+        <!--padding in between sections-->
+        <div id="pic">
+          <span id="cpt">
+            <span
+              ><p>
+                Hi! I'm Michael and currently a first-year CompSci degree student in Swinburne.
+              </p></span
+            >
+          </span>
+          <img src="images/michael.jpg" alt="Picture of Michael" id="pfp" />
+        </div>
+
+        <div id="credentials">
+          <p id="name">Michael Wong Joo Jia</p>
+          <p id="student_id">104381424</p>
+          <p id="course">Bachelor of Computer Science</p>
+        </div>
+      </section>
+
       <br />
-      <!--padding in between sections-->
-      <div class="pic">
-        <span class="cpt">
-          <span
-            ><p>
-              Hi! I'm Michael and currently a first-year CompSci degree student
-              in Swinburne.
-            </p></span
-          >
-        </span>
-        <img src="michael.png" alt="Picture of Michael" class="pfp" />
-      </div>
 
-      <div class="credentials">
-        <p class="name">Michael Wong Joo Jia</p>
-        <p class="student_id">104381424</p>
-        <p class="course">Bachelor of Computer Science(Data Science)</p>
-      </div>
+      <!--Information section-->
+      <section>
+        <div id="table">
+          <table id="info_t">
+            <tr class="odd paing">
+              <th>Age</th>
+              <td>19</td>
+            </tr>
 
-      <div class="table">
-        <table class="info_t">
-          <tr class="odd">
-            <th>Age</th>
-            <td>19</td>
-          </tr>
-          <tr class="even">
-            <th>Gender</th>
-            <td>Male</td>
-          </tr>
-          <tr class="odd">
-            <th>Nationality</th>
-            <td>Malaysian</td>
-          </tr>
-          <tr class="even">
-            <th>Description of Hometown</th>
-            <td>
-              Originally from Sarikei, a small town in Sarawak, I moved to
-              Kuching early on in my life.
-            </td>
-          </tr>
-          <tr class="odd">
-            <th>A Great Achievement</th>
-            <td>
-              I'm proud of my tenure as the Leo Club president at my school from
-              2021 to 2022. I'm happy to have had the chance to help so many
-              others out as well as changing myself and my life for the better.
-            </td>
-          </tr>
-          <tr class="even">
-            <th>Some things I enjoy!</th>
-            <td>
-              I enjoy reading, looking for tunes and video games in my spare
-              time!
-            </td>
-          </tr>
-        </table>
-      </div>
+            <tr class="even">
+              <th>Gender</th>
+              <td>Male</td>
+            </tr>
+
+            <tr class="odd paing">
+              <th>Nationality</th>
+              <td>Malaysian</td>
+            </tr>
+
+            <tr class="even">
+              <th>Description of Hometown</th>
+              <td>
+                Originally from Sarikei, a small town in Sarawak, I moved to Kuching early on in my life.
+              </td>
+            </tr>
+
+            <tr class="odd paing">
+              <th>A Great Achievement</th>
+              <td>
+                I'm proud of my tenure as the Leo Club president at my school from 2021 to 2022. I'm happy to have had the chance to help so many others out as well as changing myself and my life for the better.
+              </td>
+            </tr>
+
+            <tr class="even">
+              <th>Some things I enjoy!</th>
+              <td>
+                I enjoy reading, looking for tunes and video games in my spare time!
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
       <br /><br />
 
-      <div class="email">
-        <button>
-          <a href="mailto:104381424@students.swinburne.edu.my"> Contact Me </a>
-        </button>
-      </div>
-    </section>
+      <!--Email section-->
+      <section>
+        <div id="email">
+          <button>
+            <a href="mailto:104381424@students.swinburne.edu.my">
+              Contact Me
+            </a>
+          </button>
+        </div>
+      </section>
+    </article>
 
     <footer>
       <div class="container">
@@ -149,13 +178,13 @@
             </ul>
           </div>
           <div class="footer-col">
-            <h4>about us</h4>
+            <h4>profile</h4>
             <ul>
-              <li><a href="#">Daniel Sie</a></li>
-              <li><a href="#">Michael Wong</a></li>
-              <li><a href="#">Paing Chan</a></li>
-              <li><a href="#">Sherlyn Kok</a></li>
-              <li><a href="#">Zwe Htet Zaw</a></li>
+              <li><a href="daniel.html">Daniel Sie</a></li>
+              <li><a href="michael.html">Michael Wong</a></li>
+              <li><a href="paing.html">Paing Chan</a></li>
+              <li><a href="sherlyn.html">Sherlyn Kok</a></li>
+              <li><a href="zwe.html">Zwe Htet Zaw</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -174,6 +203,8 @@
                 ><i class="fa-solid fa-envelope"></i
               ></a>
               <br />
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <span id="youtube-link">Link to YouTube</span>
             </div>
             <a class="footer-essentials" href="acknowledgement.html"
               >Acknowledgements</a
