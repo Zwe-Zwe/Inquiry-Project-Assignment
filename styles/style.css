@@ -1856,6 +1856,7 @@ footer {
   background-color: var(--clr-secondary);
   padding: 3% 4%;
   font-style: italic;
+  text-align: center;
 }
 footer .container .row {
   display: flex;
@@ -1872,17 +1873,6 @@ footer .container .row {
   font-weight: 500;
   position: relative;
 }
-/* Vertical line below the footer headings */
-.footer-col h4::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  background-color: var(--clr-accent);
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
-}
 .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -1897,17 +1887,11 @@ footer .container .row {
 .footer-essentials {
   font-size: 12px;
   text-transform: capitalize;
-  padding-right: 25px;
   color: var(--clr-primary);
   text-decoration: none;
   font-weight: 300;
   display: block;
   transition: all 0.3s ease;
-}
-.footer-col ul li a:hover,
-.footer-essentials:hover {
-  color: var(--clr-primary);
-  padding-left: 8px;
 }
 .footer-col .social-links a {
   display: inline-block;
@@ -1919,6 +1903,11 @@ footer .container .row {
   border-radius: 50%;
   color: var(--clr-primary);
   transition: all 0.5s ease;
+}
+.footer-col ul li a:hover,
+.footer-essentials:hover {
+  color: var(--clr-primary);
+  padding-left: 20px;
 }
 .footer-col .social-links a:hover {
   color: var(--clr-secondary);
