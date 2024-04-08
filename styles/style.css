@@ -268,7 +268,7 @@ h3 {
   font-family: Arial, sans-serif; /* Arial font */
 }
 #course {
-  color: rgb(38, 0, 255); /* colour for the course */
+  color:black; /* colour for the course */
 }
 #pic {
   width: 30%;
