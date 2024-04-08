@@ -1012,7 +1012,7 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
 }
 /*End of CSS for navbar*/
 
-/*Start of CSS for activity_page*/
+/*Start of CSS for activities*/
 .text {
   padding-top: 5%;
   padding-left: 5%;
@@ -1195,7 +1195,7 @@ iframe {
 #activity_addition {
   list-style-type: lower-roman;
 }
-/*End of activity_page*/
+/*End of activities*/
 
 /* Back to Top  */
 
