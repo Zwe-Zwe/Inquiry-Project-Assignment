@@ -1009,7 +1009,7 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
 
 .text h1,
 .text h2 {
-  font-size: 16px;
+  font-size: 110%;
 }
 
 .content_text {
