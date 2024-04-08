@@ -758,7 +758,7 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
 /* End of Service Page Two */
 
 /*Start of CSS for phone navbar*/
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   #logo_div {
     display: none;
   }
@@ -892,8 +892,7 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
 }
 /*End of CSS for phone navbar*/
 /*Start of CSS for navbar*/
-
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   #logo {
     display: none;
   }
