@@ -1187,18 +1187,15 @@ html {
   scroll-behavior: smooth;
 }
 .top {
-  /* --offset: px; */
   background-color: var(--clr-accent);
   color: var(--clr-primary);
   padding: 3px;
   text-decoration: none;
   border-radius: 100px;
   font-size: 14px;
-  /* place-self: end; */
   position: sticky;
   bottom: 0.5vw;
   margin-top: 150vh;
-  /* margin-top: calc(100vh + var(--offset)); */
   margin-left: 93%;
   white-space: nowrap;
   opacity: 0.8;
