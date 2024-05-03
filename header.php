@@ -1,4 +1,4 @@
-<a href="index.html"><img src="images/logo.jpg" id="logo"></img></a>
+<a href="index.html"><img src="images/logo.jpg" id="logo" alt="logo"></img></a>
   <input class="side-menu" type="checkbox" id="side-menu">
   <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
   <nav>
