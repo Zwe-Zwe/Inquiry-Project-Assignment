@@ -1,8 +1,8 @@
-<a href="index.html"><img src="images/logo2.png" id="logo"></img></a>
+<a href="index.html"><img src="images/logo.jpg" id="logo"></img></a>
   <input class="side-menu" type="checkbox" id="side-menu">
   <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
   <nav>
-      <a href="index.html"><img src="images/logo2.png" alt="logo" id="navbar_logo"></a>
+      <a href="index.html"><img src="images/logo.jpg" alt="logo" id="navbar_logo"></a>
       <ul class="navbar">
           <li><a href="index.html">Home</a></li>
           <li class="subnav">
