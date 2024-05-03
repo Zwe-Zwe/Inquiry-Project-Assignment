@@ -3,8 +3,8 @@
   <head>
     <title>Malaysian Sign Language</title>
     <meta charset="utf-8">
-    <meta name="description" content="service4">
-    <meta name="keywords" content="service4">
+    <meta name="description" content="service3">
+    <meta name="keywords" content="service3">
     <meta name="author" content="Daniel Sie, Zwe Htet Zaw, Paing Chan, Sherlyn Kok, Michael Wong">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
@@ -26,57 +26,9 @@
 
   <body>
     <header>
-      <a href="https://arekku21.github.io/MSL-Medical/" id="logo"
-        ><img id="res_logo" src="images/logo2.png" alt="Sarawak Society for the Deaf"
-      /></a>
-      <input class="side-menu" type="checkbox" id="side-menu" />
-      <label class="hamb" for="side-menu"
-        ><span class="hamb-line"></span
-      ></label>
-      <nav>
-        <ul class="navbar">
-          <div class="nav_div">
-            <div id="logo_div">
-              <a href="index.html"
-                ><img
-                  src="images/logo2.png"
-                  alt="Sarawak Society for the Deaf"
-                  id="msl_logo"
-              /></a>
-            </div>
-            <div id="nav_menu">
-              <li><a href="index.html">Home</a></li>
-              <li class="subnav">
-                <a href="#">Services <i class="fa fa-caret-down"></i></a>
-                <ul class="submenu">
-                  <li><a href="service1.html">BIM Class</a></li>
-                  <li><a href="service2.html">Car Wash</a></li>
-                  <li><a href="service3.html">Haircut & Trimming</a></li>
-                  <li><a href="service4.html">Sewing & Alteration</a></li>
-                </ul>
-              </li>
-              <li><a href="activities.html">Activities</a></li>
-              <li class="subnav">
-                <a href="#">Forms <i class="fa fa-caret-down"></i></a>
-                <ul class="submenu">
-                  <li><a href="enquiry-service.html">Enquiry</a></li>
-                  <li><a href="join-volunteer.html">Volunteer</a></li>
-                </ul>
-              </li>
-              <li class="subnav">
-                <a href="#">Profiles <i class="fa fa-caret-down"></i></a>
-                <ul class="submenu">
-                  <li><a href="daniel.html">&#128100; Daniel Sie</a></li>
-                  <li><a href="michael.html">&#128100; Michael Wong</a></li>
-                  <li><a href="paing.html">&#128100; Paing Chan</a></li>
-                  <li><a href="sherlyn.html">&#128100; Sherlyn Kok</a></li>
-                  <li><a href="zwe.html">&#128100; Zwe Htet Zaw</a></li>
-                </ul>
-              </li>
-            </div>
-          </div>
-        </ul>
-      </nav>
+      <?php
+        include "header.php"
+      ?>
     </header>
 
     <div class="space">
@@ -98,35 +50,36 @@
               <li id="slide1">
                 <figure>
                   <img
-                    src="images/st1.jpg"
+                    src="images/hc1.jpg"
                     width="650"
-                    alt="sewing and alteration 1"
-                    title="Alteration Services at SSD"
+                    alt="hair cut 1"
+                    title="Charity Haircut Group Photo"
                   />
-                  <figcaption>Sewing and Alteration 1</figcaption>
+                  <figcaption>Charity Haircut Group Photo</figcaption>
                 </figure>
               </li>
               <li id="slide2">
                 <figure>
                   <img
-                    src="images/st2.jpg"
+                    src="images/hc2.jpg"
                     width="650"
-                    alt="sewing and alteration 2"
-                    title="Tailoring Services at SSD"
+                    alt="hair cut 2"
+                    title="Haircut in Session"
                   />
-                  <figcaption>Sewing and Alteration 2</figcaption>
+                  <figcaption>Haircut in Session</figcaption>
                 </figure>
               </li>
               <li id="slide3">
                 <figure>
                   <img
-                    src="images/st3.jpg"
+                    src="images/hc3.jpg"
                     width="650"
-                    alt="sewing and alteration 3"
-                    title="Sewing Services at SSD"
+                    alt="hair cut 3"
+                    title="Haircut in Session 2"
                   />
-                  <figcaption>Sewing and Alteration 3</figcaption>
+                  <figcaption>Haircut in Session 2</figcaption>
                 </figure>
+                <!-- This image is randomly chosen from Google due to the lack of image sources on SSD's haircut and trimming services -->
               </li>
             </ul>
           </div>
@@ -136,40 +89,54 @@
       <section class="services_section">
         <!-- Content Section -->
         <div class="services">
-          <h2 class="servicesh2">Sewing and Alteration</h2>
+          <h2 class="servicesh2">Haircut and Trimming</h2>
           <dl>
-            <dt><strong> -- Sewing &amp; Alteration -- </strong></dt>
+            <dt><strong> -- SSD Haircut &amp; Trimming Service -- </strong></dt>
             <dd>
-              As the name suggests, Sarawak Society for the Deaf provides the
-              public with sewing and alteration for any fabric or garments.
+              Charity hair cut and trimming services offered by Sarawak Society
+              of the Deaf during International Deaf Day.
             </dd>
           </dl>
         </div>
         <hr class="serviceshr" />
         <div class="service_content_1">
           <aside class="servicesaside">
-            Besides the alteration services, members of SSD also handcraft
-            various items such as baskets made out of <em>rattan</em>, drawings,
-            postcards, keychains, cakes, cookies etc.
+            Sarawak Society for the Deaf collaborates with different hair
+            saloons such as Barber Boss and Hairven Saloon to provide hair cut
+            services for those who are interested, giving people a fresh new
+            hairstyle as well as giving back to society.
           </aside>
 
           <h3 class="servicesh3">About the Service</h3>
           <p>
-            This particular service offered by SSD is also one of the favourites
-            besides the BIM classes and Charity Car Wash. Most revies online
-            have recommend this service to others as they mentioned that people
-            can take their clothes here to be altered while waiting for their
-            car to be cleaned.
+            Schedules for the event is unknown but Sarawak Society for the Deaf
+            previously held events that also provide haircut services for anyone
+            who stops by events such as International Deaf day or SSD Family Day
+            Charity Food Fair.
           </p>
 
-          <h3 class="servicesh3">Sewing, Alteration and Tailoring</h3>
+          <h3 class="servicesh3">Haircut and Trimming</h3>
           <p>
-            &nbsp; Alteration and tailoring services here are provided by the
-            experienced deaf tailors at low charges. They have been practicing
-            and honing their skills for years and becoming experts in their
-            field, thus meeting the different needs of society. Do drop by if
-            you have any torn, undersized or oversized garments and let the
-            experts do their magic!
+            &nbsp; According to Sarawak Society for the Deaf (SSD)'s
+            <em>Facebook</em> page, they first held a haircut and trimming event
+            back in September 2017 in conjuction with International Deaf Day and
+            Family Day Charity Food Fair. So far, services of such are offered
+            solely during events by SSD and prices are not disclosed however it
+            shouldn't be too expensive. Occasionally, they do give out free
+            haircuts every now and then!
+          </p>
+          <p>
+            &nbsp; <br />
+            If you are interested in getting a new hairstyle or a simple trim,
+            please contact or Whatsapp
+            <a href="https://wa.me/0128118260" class="serviceslink"
+              >012-8118260</a
+            >
+            or E-mail
+            <a href="mailto:ssdkuching1982@hgmail.com" class="serviceslink"
+              >SSD Kuching Headquarters</a
+            >
+            for further booking and confirmation.
           </p>
         </div>
       </section>

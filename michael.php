@@ -3,8 +3,8 @@
   <head>
     <title>Malaysian Sign Language</title>
     <meta charset="utf-8">
-    <meta name="description" content="zwe">
-    <meta name="keywords" content="zwe">
+    <meta name="description" content="michael">
+    <meta name="keywords" content="michael">
     <meta name="author" content="Daniel Sie, Zwe Htet Zaw, Paing Chan, Sherlyn Kok, Michael Wong">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
@@ -25,57 +25,9 @@
   </head>
   <body>
     <header>
-      <a href="https://arekku21.github.io/MSL-Medical/" id="logo"
-        ><img id="res_logo" src="images/logo2.png" alt="Sarawak Society for the Deaf"
-      /></a>
-      <input class="side-menu" type="checkbox" id="side-menu" />
-      <label class="hamb" for="side-menu"
-        ><span class="hamb-line"></span
-      ></label>
-      <nav>
-        <ul class="navbar">
-          <div class="nav_div">
-            <div id="logo_div">
-              <a href="index.html"
-                ><img
-                  src="images/logo2.png"
-                  alt="Sarawak Society for the Deaf"
-                  id="msl_logo"
-              /></a>
-            </div>
-            <div id="nav_menu">
-              <li><a href="index.html">Home</a></li>
-              <li class="subnav">
-                <a href="#">Services <i class="fa fa-caret-down"></i></a>
-                <ul class="submenu">
-                  <li><a href="service1.html">BIM Class</a></li>
-                  <li><a href="service2.html">Car Wash</a></li>
-                  <li><a href="service3.html">Haircut & Trimming</a></li>
-                  <li><a href="service4.html">Sewing & Alteration</a></li>
-                </ul>
-              </li>
-              <li><a href="activities.html">Activities</a></li>
-              <li class="subnav">
-                <a href="#">Forms <i class="fa fa-caret-down"></i></a>
-                <ul class="submenu">
-                  <li><a href="enquiry-service.html">Enquiry</a></li>
-                  <li><a href="join-volunteer.html">Volunteer</a></li>
-                </ul>
-              </li>
-              <li class="subnav">
-                <a href="#">Profiles <i class="fa fa-caret-down"></i></a>
-                <ul class="submenu">
-                  <li><a href="daniel.html">&#128100; Daniel Sie</a></li>
-                  <li><a href="michael.html">&#128100; Michael Wong</a></li>
-                  <li><a href="paing.html">&#128100; Paing Chan</a></li>
-                  <li><a href="sherlyn.html">&#128100; Sherlyn Kok</a></li>
-                  <li><a href="zwe.html">&#128100; Zwe Htet Zaw</a></li>
-                </ul>
-              </li>
-            </div>
-          </div>
-        </ul>
-      </nav>
+      <?php
+        include "header.php"
+      ?>
     </header>
 
     <article id="profile-page">
@@ -90,17 +42,16 @@
           <span id="cpt">
             <span
               ><p>
-                Hi! I'm Zwe Htet Zaw and currently a first-year Computer Science
-                Degree student in Swinburne, Sarawak.
+                Hi! I'm Michael and currently a first-year CompSci degree student in Swinburne.
               </p></span
             >
           </span>
-          <img src="images/zwezwe.jpg" alt="Picture of Paing" id="pfp" />
+          <img src="images/michael.png" alt="Picture of Michael" id="pfp" />
         </div>
 
         <div id="credentials">
-          <p id="name">Zwe Htet Zaw</p>
-          <p id="student_id">102783659</p>
+          <p id="name">Michael Wong Joo Jia</p>
+          <p id="student_id">104381424</p>
           <p id="course">Bachelor of Computer Science</p>
         </div>
       </section>
@@ -111,9 +62,9 @@
       <section>
         <div id="table">
           <table id="info_t">
-            <tr class="odd zwe">
+            <tr class="odd michael">
               <th>Age</th>
-              <td>21</td>
+              <td>19</td>
             </tr>
 
             <tr class="even">
@@ -121,29 +72,29 @@
               <td>Male</td>
             </tr>
 
-            <tr class="odd zwe">
+            <tr class="odd michael">
               <th>Nationality</th>
-              <td>Myanmar</td>
+              <td>Malaysian</td>
             </tr>
 
             <tr class="even">
               <th>Description of Hometown</th>
               <td>
-                I am from Monywa, a bustling town located in Central Myanmar.
+                Originally from Sarikei, a small town in Sarawak, I moved to Kuching early on in my life.
               </td>
             </tr>
 
-            <tr class="odd zwe">
+            <tr class="odd michael">
               <th>A Great Achievement</th>
               <td>
-                I am proud of seizing the opportunity to contribute to the ever-evolving IT society
+                I'm proud of my tenure as the Leo Club president at my school from 2021 to 2022. I'm happy to have had the chance to help so many others out as well as changing myself and my life for the better.
               </td>
             </tr>
 
             <tr class="even">
               <th>Some things I enjoy!</th>
               <td>
-                I find joy in listening to music, exploring movies across various genres, and immersing myself in captivating games.
+                I enjoy reading, looking for tunes and video games in my spare time!
               </td>
             </tr>
           </table>
@@ -156,7 +107,7 @@
       <section>
         <div id="email">
           <button>
-            <a href="mailto:102783659@students.swinburne.edu.my">
+            <a href="mailto:104381424@students.swinburne.edu.my">
               Contact Me
             </a>
           </button>
