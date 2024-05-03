@@ -743,256 +743,219 @@ input[type="radio"]#button-3:checked ~ .arrows#arrow-2 {
 /* End of Service Page Two */
 
 /*Start of CSS for phone navbar*/
-@media (max-width: 768px) {
-  #logo_div {
-    display: none;
+@media (max-width: 767px){
+  #navbar_logo{
+    display:none;
   }
-
-  #res_logo {
-    width: 50px;
-    height: auto;
-    margin-top: 15px;
-    margin-left: 10px;
+  #logo{
+      display: inline-block;
+      margin-left: 10px;
+      width:69px;
   }
-
-  #logo {
-    display: inline-block;
-    color: black;
-    font-size: 40px;
-    margin-left: 10px;
-    text-decoration: none;
+  nav a{
+  text-decoration: none;
   }
-  nav a {
-    text-decoration: none;
+  nav ul{
+      list-style: none;
   }
-  nav ul {
-    list-style: none;
+  header{
+  background-color: white;
+  box-shadow:0px 5px 15px grey;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index:999;
   }
-  header {
-    background-color: white;
-    box-shadow: 0px 5px 15px grey;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 999;
+  nav{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background-color: white;
+      overflow: hidden;
   }
-  nav {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: white;
-    overflow: hidden;
+  .navbar a{
+      display: block;
+      padding: 20px;
+      color: black;
   }
-  .navbar a {
-    display: block;
-    padding: 20px;
-    color: black;
+  nav a:hover{
+      background-color:#546DA6;
   }
-  nav a:hover {
-    background-color: #546da6;
+  nav{
+      max-height: 0;
+      transition: max-height .5s ease-out;
   }
-  nav {
-    max-height: 0;
-    transition: max-height 0.5s ease-out;
-  }
-  .hamb {
-    cursor: pointer;
-    float: right;
-    padding-top: 25px;
-    padding-right: 3%;
-    margin-top: 10px;
-  } /* Style label tag */
+  .hamb{
+      cursor: pointer;
+      float: right;
+      padding-top: 35px;
+      padding-right: 5%;
+  }/* Style label tag */
 
   .hamb-line {
-    background: black;
-    display: block;
-    height: 4px;
-    position: relative;
-    width: 27px;
-    z-index: 999;
+      background: black;
+      display: block;
+      height: 4px;
+      position: relative;
+      width: 27px;
+      z-index:999;
+
   } /* Style span tag */
 
   .hamb-line::before,
-  .hamb-line::after {
-    background: black;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all 0.2s ease-out;
-    width: 100%;
-    z-index: 999;
+  .hamb-line::after{
+      background: black;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+      z-index:999;
   }
-  .hamb-line::before {
-    top: 9px;
+  .hamb-line::before{
+      top: 9px;
   }
-  .hamb-line::after {
-    top: -9px;
+  .hamb-line::after{
+      top: -9px;
   }
 
   .side-menu {
-    display: none;
+      display: none;
   }
-  .side-menu:checked ~ nav {
-    max-height: 100%;
+  .side-menu:checked ~ nav{
+      max-height: 100%;
   }
   .side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
+      background: transparent;
   }
   .side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top: 0;
+      transform: rotate(-45deg);
+      top:0;
   }
   .side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top: 0;
+      transform: rotate(45deg);
+      top:0;
   }
-  .submenu {
-    background-color: white;
-    width: 100%;
-    z-index: 1;
-    padding: 20px 0;
-    display: none;
-    box-shadow: 10px 5px 15px grey;
+  .submenu{
+      background-color: white;
+      width: 100%;
+      z-index: 1;
+      padding: 20px 0 ;
+      display: none;
+      box-shadow:10px 5px 15px grey;
   }
-  .submenu li {
-    transition: height 0.5s;
+  .submenu li{
+      transition:height 0.5s;
   }
-  .submenu a {
-    color: black;
-    text-decoration: none;
-    padding: 0;
-    margin: 5px 0;
-    text-align: left;
-    margin-left: 10%;
+  .submenu a{
+      color: black;
+      text-decoration: none;
+      padding: 0;
+      margin: 5px 0;
+      text-align: left;
+      margin-left:10%;
   }
-  .submenu a:hover {
-    text-decoration: underline;
-    background-color: white;
-    text-underline-offset: 4px;
+  .submenu a:hover{
+      text-decoration:underline;
+      background-color:white;
+      text-underline-offset:4px;
   }
-  .subnav:hover .submenu {
-    display: block;
+  .subnav:hover .submenu{
+      display: block;
   }
 }
 /*End of CSS for phone navbar*/
 /*Start of CSS for navbar*/
-@media (min-width: 768px) {
-  #logo {
-    display: none;
-  }
-  #msl_logo {
-    width: 50px;
-    height: auto;
-    float: left;
-    margin-left: 10px;
-  }
-  .nav_div {
-    display: flex;
-    width: 100%;
-    height: 60px;
-    justify-content: left;
-  }
-
-  #nav_menu {
-    margin-top: 20px;
-    width: 100%;
-  }
-  #logo_div {
-    left: 0;
-    padding: 5px;
-    width: 35%;
-    float: left;
-  }
-
-  .navbar {
-    align-items: center;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    font-family: "Kanit", sans-serif;
-    font-size: 15px;
-    z-index: 998;
-    background-color: white;
-    margin: 0;
-    padding-top: 0;
-    box-shadow: 0px 5px 15px grey;
-    li {
-      /* display: inline-block; */
-      float: left;
-      margin-right: 2%;
-      padding: 0 20px 0 20px;
-      list-style: none;
-      transition: all 0.5s ease-in-out;
-      &:hover {
-        .submenu {
-          height: 100%;
-          margin-top: 2px;
-        }
-
-        a {
-          color: #546da6;
-          &::before {
-            visibility: visible;
-            transform: scale(1, 1);
-          }
-        }
-      }
+@media (min-width: 767px){
+#logo{
+  display:none;
+}
+#navbar_logo{
+  position:fixed;
+  top:-2px;
+  left:15px;
+  z-index:999;
+  color:black;
+  max-width:75px;
+  min-width:75px;
+}
+.navbar{
+  min-height:75px;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  font-family:"Kanit",sans-serif;
+  font-size:15px;
+  z-index:998;
+  background-color:white;
+  margin:0;
+  padding-top: 30px;
+  box-shadow:0px 5px 15px grey;
+  li {
+    display:inline-block;
+    margin-right: 2%;
+    transition:all 0.5s ease-in-out;
+    &:hover {
       .submenu {
-        overflow: hidden;
-        position: absolute;
-        left: 0;
-        margin-top: 2px;
-        width: 100%;
-        background-color: #546da6;
-        height: 0;
-        line-height: 50px;
-        box-sizing: border-box;
-        transition: height 0.3s ease-in-out;
-        transition-delay: 0.1s;
-        box-shadow: 0px 5px 15px grey;
-        z-index: 999;
-        display: flex; /* Align lists center */
-        justify-content: center; /* Align lists center */
-        a {
-          color: #ffffff;
-          font-size: 15px;
-          &:hover {
-            color: #ffffff;
-            text-decoration: underline;
-            text-underline-offset: 4px;
+          height: 100%;
+      }
+      a {        
+          color: #546DA6;
+          &::before {
+          visibility: visible;
+          transform: scale(1, 1);
           }
-        }
-      }
-
-      .submenu li {
-        margin-top: 5px;
-      }
-
-      a {
-        color: rgb(38, 38, 38);
-        display: block;
-        padding: 0 7px 0 7px;
-        margin: 0 0 15px;
-        text-decoration: none;
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 3px;
-          bottom: -15px;
-          left: 0px;
-          background-color: #546da6;
-          transition: all 0.2s ease-in-out;
-          transform: scale(0, 0);
-          visibility: hidden;
-        }
       }
     }
+    .submenu {
+    overflow:hidden;
+    position:absolute;
+    left: 0;
+    width: 100%;
+    background-color: #546DA6;
+    height: 0;
+    line-height: 70px;
+    box-sizing:border-box;
+    transition:height 0.3s ease-in-out;
+    transition-delay: 0.1s;
+    box-shadow:0px 5px 15px grey;
+    z-index:999;
+    a {
+        color: #ffffff;
+        font-size: 15px;
+        &:hover {
+          color: #ffffff;
+          text-decoration:underline;
+          text-underline-offset: 4px;
+        }
+    }
+    }
+    a {
+    color: rgb(38, 38, 38);
+    display: block;
+    padding: 0 7px 0 7px;
+    margin: 0 0 22px;
+    text-decoration: none;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: -15px;
+        left: 0px;
+        background-color: #546DA6;
+        transition: all 0.2s ease-in-out;
+        transform: scale(0, 0);
+        visibility: hidden;
+    }
+    }
   }
+}
 }
 /*End of CSS for navbar*/
 
